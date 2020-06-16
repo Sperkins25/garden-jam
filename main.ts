@@ -418,7 +418,32 @@ d 3 2 4 4 1 2 4 2 1 2 2 1 4 . .
 1 2 1 2 . . . . . . . . . . . . 
 `
 }
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+    FlipHoriz = 1
+    Right = -1
+})
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (jumpsRemaining > 0) {
+        if (jumpsRemaining == 2) {
+            mySprite.vy = -120
+        }
+        if (jumpsRemaining == 1) {
+            mySprite.vy = -140
+        }
+        pause(200)
+        jumpsRemaining += -1
+    }
+})
+controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+    FlipHoriz = 0
+    Right = 1
+})
+let GlidingAnim = 0
 let animationFrame = 0
+let jumpsRemaining = 0
+let Right = 0
+let FlipHoriz = 0
+let mySprite: Sprite = null
 color.setColor(1, color.rgb(45, 27, 0))
 color.setColor(2, color.rgb(30, 96, 110))
 color.setColor(3, color.rgb(90, 185, 168))
@@ -448,7 +473,7 @@ tiles.setTilemap(tiles.createTilemap(
             TileScale.Sixteen
         ))
 scene.setBackgroundColor(5)
-let mySprite = sprites.create(img`
+mySprite = sprites.create(img`
 . . . . . . . . . 1 . . 1 . . . 
 . . . . . . . . 1 . . 1 . . . . 
 . . . . . . . . 4 1 1 4 . . . . 
@@ -467,8 +492,14 @@ let mySprite = sprites.create(img`
 . . . . . 1 1 . 1 1 . . . . . . 
 `, SpriteKind.Player)
 scene.cameraFollowSprite(mySprite)
-controller.moveSprite(mySprite, 100, 0)
 game.onUpdate(function () {
+    if (controller.right.isPressed()) {
+        mySprite.vx += 23
+    }
+    if (controller.left.isPressed()) {
+        mySprite.vx += -23
+    }
+    mySprite.vx = mySprite.vx * 0.8
     mySprite.vy += 8
     mySprite.setImage(img`
 . . . . . . . . . . 1 . . 1 . . 
@@ -583,6 +614,130 @@ game.onUpdate(function () {
 . . . . . . 2 2 . . . . . . . . 
 `)
     }
+    if (mySprite.vy < 0 && jumpsRemaining == 2) {
+        mySprite.setImage(img`
+. . . . . . . . . . . . . 1 . . 
+. . . . . . . . . 1 1 . 1 . . . 
+. . . . . . . . 1 2 . 2 4 . . . 
+. . . . . 2 2 2 4 4 4 4 . . 2 . 
+. . . 2 2 2 1 2 4 1 4 1 . . . 2 
+. . . 1 1 2 2 2 4 4 4 4 . . 2 . 
+. . . 1 1 2 1 2 3 3 2 2 . 2 2 . 
+. . . 2 2 2 2 2 4 1 3 3 2 2 . . 
+. . . 2 1 1 2 2 1 3 3 4 . . . . 
+. . . 2 1 1 2 1 3 3 3 3 . . . . 
+. . . . 2 2 2 1 3 3 4 3 . . . . 
+. . . . . . 2 1 4 4 3 . . . . . 
+. . . . . . 3 3 1 3 1 1 1 . . . 
+. . . . . . . . 2 2 . . 1 1 . . 
+. . . . . . . 2 2 . . . . 1 . . 
+. . . . 2 . . 2 . . . . 1 . . . 
+. . . . . 2 2 2 . . . 1 . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`)
+    }
+    if (mySprite.vy < 0 && jumpsRemaining == 1) {
+        mySprite.setImage(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . 1 1 . 1 . . . 
+. . . . . . . . 1 2 . 2 4 . . . 
+. . . . . . . . 4 4 4 4 . . . . 
+. . . . . 2 1 2 4 1 4 1 2 . . . 
+. . . . 1 2 2 2 4 4 4 4 . 2 . . 
+. . . 1 1 2 1 2 3 3 2 2 . 2 . . 
+. . . 2 2 2 2 2 4 1 3 3 . 2 . . 
+. . . 2 1 1 2 2 1 3 3 4 2 . . . 
+. . . 2 1 1 2 1 3 3 3 3 . . . . 
+. . . . 2 2 2 1 3 3 4 3 . . . . 
+. . . . . . 2 1 4 4 3 . . . . . 
+. . . . . . 3 3 1 3 1 . . . . . 
+. . . . . . . . 2 . . 1 . . . . 
+. . . . . . . . 2 . . 1 . . . . 
+. . . . . . . 2 . . 1 . . . . . 
+. . . . . . . 2 . 1 . . . . . . 
+. . . . . . 2 . . 1 . . . . . . 
+. . . . . . . 2 . . . . . . . . 
+`)
+    }
+    if (mySprite.vy > 0 && !(mySprite.isHittingTile(CollisionDirection.Bottom))) {
+        mySprite.setImage(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . 1 1 . 1 . . . 
+. . . . . . . . 1 2 . 2 4 1 . . 
+. . . . . . . . 4 4 4 4 . . . . 
+. . . . . 2 2 2 4 1 4 1 . 2 . . 
+. . . . 1 2 2 2 4 4 4 4 . . 2 . 
+. . . 1 1 2 1 2 3 3 2 2 . 2 . . 
+. . . 2 2 2 1 2 4 1 3 3 2 2 . . 
+. . . 2 2 2 2 2 1 3 3 4 . . . . 
+. . . 2 1 1 2 1 3 3 3 3 . . . . 
+. . . . 1 1 2 1 3 3 4 3 . . . . 
+. . . . . . 2 1 4 4 3 . . . . . 
+. . . . . . 3 3 1 3 1 1 1 . 1 . 
+. . . . . . . 2 2 . . . . 1 . . 
+. . . . . . . . 2 . . . . . . . 
+. . . . . . . . . 2 . . . . . . 
+. . . . . . . . . 2 . . . . . . 
+. . . . . . . . . . 2 . . . . . 
+`)
+    }
+    if (mySprite.isHittingTile(CollisionDirection.Bottom)) {
+        jumpsRemaining = 2
+    }
+    if (jumpsRemaining == 0 && controller.A.isPressed()) {
+        mySprite.vy = 15
+        if (GlidingAnim == 1) {
+            mySprite.setImage(img`
+. . . . . . . . . . . . . . 3 3 3 . . 
+. . . . . . . . . . . . . 3 3 4 4 3 . 
+. . 4 4 4 4 . . . . . 3 3 3 4 4 3 3 3 
+. 4 3 3 4 4 4 4 . . 3 3 1 1 4 1 3 3 3 
+. 4 4 3 3 3 4 4 4 . 3 1 2 3 2 4 1 3 3 
+. 4 4 4 4 3 3 3 4 4 3 4 4 4 4 3 3 3 3 
+. 4 4 4 4 4 4 4 2 2 2 4 1 4 1 3 2 3 3 
+. 4 4 4 4 4 4 1 2 2 2 4 4 4 4 3 3 2 . 
+. 4 4 4 4 4 1 1 2 1 2 3 3 2 2 3 2 . . 
+. . 4 4 4 4 2 2 2 1 2 4 1 3 3 2 2 . . 
+. . . . . . 2 2 2 2 2 1 3 3 4 . . . . 
+. . . . . . 2 1 1 2 1 3 3 3 3 . . . . 
+. . . . . . . 1 1 2 1 3 3 4 3 . . . . 
+. . . . . . . . . 2 1 4 4 3 . . . . . 
+. . . . . . . . . 3 3 1 3 1 1 . . . . 
+. . . . . . . . . . 2 2 . . . 1 . . . 
+. . . . . . . . . . . 2 . . . 1 . . . 
+. . . . . . . . . . . . 2 . . . 1 . . 
+. . . . . . . . . . . . . . . . . . . 
+`)
+        }
+        if (GlidingAnim == 2) {
+            mySprite.setImage(img`
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . 1 . . 1 . . 
+. . . . . . . . . . . . 1 . . 1 . . . 
+. . . . . . . . . . . 1 2 3 2 . . . . 
+. . . . . . . . . . . 4 4 4 4 . . . . 
+. . . . . . . . 2 2 2 4 1 4 1 . . . . 
+. . . . . . . 1 2 2 2 4 4 4 4 2 . . . 
+. . . . . . 1 1 2 1 2 3 3 2 2 . 2 . . 
+. . . . . . 2 2 2 1 2 4 1 3 3 2 2 . . 
+. . . . . . 2 2 2 2 2 1 3 3 4 . . . . 
+. . . . . . 2 1 1 2 1 3 3 3 3 . . . . 
+. . . . . . . 1 1 2 1 3 3 4 3 . . . . 
+. . . . . . . . . 2 1 4 4 3 . . . . . 
+. . . . . . . . . 3 3 1 3 1 1 . . . . 
+. . . . . . . . . . 2 2 . . . 1 . . . 
+. . . . . . . . . . . 2 . . . 1 . . . 
+. . . . . . . . . . 2 . . . 1 . . . . 
+. . . . . . . . . . . . . . . . . . . 
+`)
+        }
+    }
+    if (FlipHoriz == 1) {
+        mySprite.image.flipX()
+    }
 })
 forever(function () {
     if (controller.left.isPressed() || controller.right.isPressed()) {
@@ -594,4 +749,10 @@ forever(function () {
     } else {
         animationFrame = 0
     }
+})
+forever(function () {
+    GlidingAnim = 1
+    pause(100)
+    GlidingAnim = 2
+    pause(100)
 })
