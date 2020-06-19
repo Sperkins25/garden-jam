@@ -423,22 +423,60 @@ d 3 2 4 4 1 2 4 2 1 2 2 1 4 . .
 `
     //% blockIdentity=images._tile
     export const tile23 = img`
-4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-4 2 2 2 2 2 4 4 4 4 2 2 2 2 2 4 
-4 2 2 2 2 2 2 2 2 2 2 2 2 2 2 4 
-4 2 2 2 2 2 2 2 2 2 2 2 2 2 2 4 
-4 4 2 2 2 2 2 2 2 2 2 2 2 2 4 4 
-4 4 2 2 2 2 2 2 2 2 2 2 2 2 4 4 
-4 4 2 2 2 2 2 2 2 2 2 2 2 2 4 4 
-4 2 2 2 2 2 2 2 2 2 2 2 2 2 2 4 
-4 2 2 2 2 2 2 2 2 2 2 2 2 2 2 4 
-4 2 2 2 2 2 2 2 2 2 2 2 2 2 2 4 
-4 4 2 2 2 2 2 2 2 2 2 2 2 2 4 4 
-4 4 2 2 2 2 2 2 2 2 2 2 2 2 4 4 
-4 4 2 2 2 2 2 2 2 2 2 2 2 2 4 4 
-4 2 2 2 2 2 2 2 2 2 2 2 2 2 2 4 
-4 2 2 2 2 2 4 4 4 4 2 2 2 2 2 4 
-4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+. 3 3 3 3 3 3 3 4 4 4 4 4 4 4 . 
+3 3 1 1 1 1 1 1 1 1 1 1 1 1 4 4 
+3 1 1 2 2 2 2 2 2 2 2 2 2 1 1 4 
+3 1 2 2 2 2 2 4 3 2 2 2 2 2 1 2 
+3 1 2 2 2 2 4 3 3 3 2 2 2 2 1 2 
+3 1 2 2 2 4 3 3 3 3 3 2 2 2 1 2 
+3 1 2 2 4 3 3 3 3 3 3 3 2 2 1 2 
+3 1 2 4 3 3 3 3 3 3 3 3 3 2 1 2 
+3 1 2 2 2 2 4 3 3 3 2 2 2 2 1 2 
+3 1 2 2 2 2 4 3 3 3 2 2 2 2 1 2 
+3 1 2 2 2 2 4 3 3 3 2 2 2 2 1 2 
+4 1 2 2 2 2 4 3 3 3 2 2 2 2 1 2 
+4 1 2 2 2 2 4 3 3 3 2 2 2 2 1 2 
+4 1 1 2 2 2 2 2 2 2 2 2 2 1 1 2 
+4 4 1 1 1 1 1 1 1 1 1 1 1 1 2 2 
+. 4 4 4 2 2 2 2 2 2 2 2 2 2 2 . 
+`
+    //% blockIdentity=images._tile
+    export const tile24 = img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . 3 . . . . . . 3 3 . . . 
+. . . 3 3 4 . . . . 4 3 4 4 . . 
+2 2 2 2 4 4 . 2 3 3 2 4 4 4 . 3 
+. . . . 4 4 . . . . . 4 4 4 . . 
+. . . 4 4 4 . . . . 4 4 4 4 . . 
+2 3 3 2 4 4 . 2 2 2 2 4 4 4 . 2 
+2 2 2 2 4 4 . 2 2 2 2 4 4 4 . 2 
+. . . . 4 4 . . . . . 4 4 4 . . 
+. . . . 4 4 . . . . . 4 4 4 . . 
+2 2 2 2 4 4 . 2 2 2 2 4 4 4 . 2 
+2 2 2 2 4 4 . 2 2 2 2 4 4 4 . 2 
+. . . . 4 4 . . . . . 4 4 4 . . 
+`
+    //% blockIdentity=images._tile
+    export const tile25 = img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . 4 . . . . . . 4 . . . . 4 . 
+. 3 4 4 . . . . 4 4 4 . . 4 4 4 
+2 2 4 4 . 2 2 2 2 4 4 . 2 2 4 4 
+. . 4 4 . . . . . 4 4 . . . 4 4 
+. . 4 4 . . . . 4 4 4 . . . 4 4 
+2 2 4 4 . 2 3 3 2 4 4 . 2 2 4 4 
+2 2 4 4 . 2 2 2 2 4 4 . 2 2 4 4 
+. . 4 4 . . . . . 4 4 . . . 4 4 
+. . 4 4 . . . . . 4 4 . . . 4 4 
+2 2 4 4 . 3 2 2 2 4 4 . 2 2 4 4 
+2 2 4 4 . 2 2 2 2 4 4 . 2 2 4 4 
+. . 4 4 . . . . . 4 4 . . . 4 4 
 `
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -455,13 +493,78 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         }
     }
 })
+function AddScenery () {
+    for (let value of tiles.getTilesByType(myTiles.tile14)) {
+        smallBush = sprites.create(myTiles.tile14, SpriteKind.Scenery)
+        tiles.placeOnTile(smallBush, value)
+        tiles.setTileAt(value, myTiles.tile0)
+        smallBush.z = 2
+    }
+    for (let value of tiles.getTilesByType(myTiles.tile15)) {
+        TreeTopLeft = sprites.create(myTiles.tile15, SpriteKind.Scenery)
+        tiles.placeOnTile(TreeTopLeft, value)
+        tiles.setTileAt(value, myTiles.tile0)
+    }
+    for (let value of tiles.getTilesByType(myTiles.tile16)) {
+        BushLeft = sprites.create(myTiles.tile16, SpriteKind.Scenery)
+        tiles.placeOnTile(BushLeft, value)
+        tiles.setTileAt(value, myTiles.tile0)
+    }
+    for (let value of tiles.getTilesByType(myTiles.tile16)) {
+        BushRight = sprites.create(myTiles.tile16, SpriteKind.Scenery)
+        tiles.placeOnTile(BushRight, value)
+        tiles.setTileAt(value, myTiles.tile0)
+    }
+    for (let value of tiles.getTilesByType(myTiles.tile17)) {
+        TreeTopLeft = sprites.create(myTiles.tile17, SpriteKind.Scenery)
+        tiles.placeOnTile(TreeTopLeft, value)
+        tiles.setTileAt(value, myTiles.tile0)
+    }
+    for (let value of tiles.getTilesByType(myTiles.tile18)) {
+        TreeTopRight = sprites.create(myTiles.tile18, SpriteKind.Scenery)
+        tiles.placeOnTile(TreeTopRight, value)
+        tiles.setTileAt(value, myTiles.tile0)
+    }
+    for (let value of tiles.getTilesByType(myTiles.tile19)) {
+        TreeMiddleLeft = sprites.create(myTiles.tile19, SpriteKind.Scenery)
+        tiles.placeOnTile(TreeMiddleLeft, value)
+        tiles.setTileAt(value, myTiles.tile0)
+    }
+    for (let value of tiles.getTilesByType(myTiles.tile20)) {
+        TreeMiddleRight = sprites.create(myTiles.tile20, SpriteKind.Scenery)
+        tiles.placeOnTile(TreeMiddleRight, value)
+        tiles.setTileAt(value, myTiles.tile0)
+    }
+    for (let value of tiles.getTilesByType(myTiles.tile21)) {
+        TreeBottomLeft = sprites.create(myTiles.tile21, SpriteKind.Scenery)
+        tiles.placeOnTile(TreeBottomLeft, value)
+        tiles.setTileAt(value, myTiles.tile0)
+    }
+    for (let value of tiles.getTilesByType(myTiles.tile22)) {
+        TreeBottomRight = sprites.create(myTiles.tile22, SpriteKind.Scenery)
+        tiles.placeOnTile(TreeBottomRight, value)
+        tiles.setTileAt(value, myTiles.tile0)
+    }
+    for (let value of tiles.getTilesByType(myTiles.tile24)) {
+        gateLeft = sprites.create(myTiles.tile24, SpriteKind.Scenery)
+        tiles.placeOnTile(gateLeft, value)
+        tiles.setTileAt(value, myTiles.tile0)
+        gateLeft.z = 2
+    }
+    for (let value of tiles.getTilesByType(myTiles.tile25)) {
+        gateRight = sprites.create(myTiles.tile25, SpriteKind.Scenery)
+        tiles.placeOnTile(gateRight, value)
+        tiles.setTileAt(value, myTiles.tile0)
+    }
+}
 let playerTileColumn = 0
 let playerTileRow = 0
 let Right = 0
 let FlipHoriz = 0
 let GlidingAnim = 0
 let animationFrame = 0
-let jumpsRemaining = 0
+let gateRight: Sprite = null
+let gateLeft: Sprite = null
 let TreeBottomRight: Sprite = null
 let TreeBottomLeft: Sprite = null
 let TreeMiddleRight: Sprite = null
@@ -471,6 +574,7 @@ let BushRight: Sprite = null
 let BushLeft: Sprite = null
 let TreeTopLeft: Sprite = null
 let smallBush: Sprite = null
+let jumpsRemaining = 0
 let thePlayer: Sprite = null
 color.setColor(1, color.rgb(45, 27, 0))
 color.setColor(2, color.rgb(30, 96, 110))
@@ -478,28 +582,29 @@ color.setColor(3, color.rgb(90, 185, 168))
 color.setColor(4, color.rgb(196, 240, 194))
 color.setColor(5, color.rgb(152, 183, 152))
 tiles.setTilemap(tiles.createTilemap(
-            hex`1a0010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010110000000000000000000103000e0f000000000000000000001213000000000000000d000406010202020300000d000e0f000d141500001600000001020202030405050506010202020202020202020202020202030405050506040505050604050505050505050505050505050506070808080907080808090708080808080808080808080808080900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            hex`1a00100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101100000000000000000000000000000000000000000000000012130000000000000000000000000000000000000d000e0f000d141516001717001800000000000000000000010202020202020202020202020202030000000103000e0f000004050505050505050505050505050506000d00040601020202030405050505050505050505050505050601020202030405050506040505050505050505050505050505060405050506040505050604050505050505050505050505050506040505050604050505060405050505050505050505050505050604050505060405050506070808080808080808080808080808090708080809070808080900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
             img`
 . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . 2 2 . . . . . 
-. . . . . . . . . . . . . . . . . . . 2 2 2 2 2 2 2 
-. . . . . . . . . . . . 2 . . . 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . 2 . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . 2 2 . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+. . . . . . . . . . . . . . . . 2 2 2 2 2 2 2 2 2 2 
+. . . . . . . . . . . . . . . . 2 2 2 2 2 2 2 2 2 2 
 . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . 
 `,
-            [myTiles.tile0,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile18,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23],
+            [myTiles.tile0,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile18,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25],
             TileScale.Sixteen
         ))
+let LevelWidth = 26
 scene.setBackgroundColor(5)
 thePlayer = sprites.create(img`
 . . . . . . . . . 1 . . 1 . . . 
@@ -538,57 +643,7 @@ StoredObjectSpace.setPosition(80, 10)
 StoredObjectSpace.setFlag(SpriteFlag.RelativeToCamera, true)
 let BlockStore = 0
 thePlayer.z = 1
-for (let value of tiles.getTilesByType(myTiles.tile14)) {
-    smallBush = sprites.create(myTiles.tile14, SpriteKind.Scenery)
-    tiles.placeOnTile(smallBush, value)
-    tiles.setTileAt(value, myTiles.tile0)
-    smallBush.z = 2
-}
-for (let value of tiles.getTilesByType(myTiles.tile15)) {
-    TreeTopLeft = sprites.create(myTiles.tile15, SpriteKind.Scenery)
-    tiles.placeOnTile(TreeTopLeft, value)
-    tiles.setTileAt(value, myTiles.tile0)
-}
-for (let value of tiles.getTilesByType(myTiles.tile16)) {
-    BushLeft = sprites.create(myTiles.tile16, SpriteKind.Scenery)
-    tiles.placeOnTile(BushLeft, value)
-    tiles.setTileAt(value, myTiles.tile0)
-}
-for (let value of tiles.getTilesByType(myTiles.tile16)) {
-    BushRight = sprites.create(myTiles.tile16, SpriteKind.Scenery)
-    tiles.placeOnTile(BushRight, value)
-    tiles.setTileAt(value, myTiles.tile0)
-}
-for (let value of tiles.getTilesByType(myTiles.tile17)) {
-    TreeTopLeft = sprites.create(myTiles.tile17, SpriteKind.Scenery)
-    tiles.placeOnTile(TreeTopLeft, value)
-    tiles.setTileAt(value, myTiles.tile0)
-}
-for (let value of tiles.getTilesByType(myTiles.tile18)) {
-    TreeTopRight = sprites.create(myTiles.tile18, SpriteKind.Scenery)
-    tiles.placeOnTile(TreeTopRight, value)
-    tiles.setTileAt(value, myTiles.tile0)
-}
-for (let value of tiles.getTilesByType(myTiles.tile19)) {
-    TreeMiddleLeft = sprites.create(myTiles.tile19, SpriteKind.Scenery)
-    tiles.placeOnTile(TreeMiddleLeft, value)
-    tiles.setTileAt(value, myTiles.tile0)
-}
-for (let value of tiles.getTilesByType(myTiles.tile20)) {
-    TreeMiddleRight = sprites.create(myTiles.tile20, SpriteKind.Scenery)
-    tiles.placeOnTile(TreeMiddleRight, value)
-    tiles.setTileAt(value, myTiles.tile0)
-}
-for (let value of tiles.getTilesByType(myTiles.tile21)) {
-    TreeBottomLeft = sprites.create(myTiles.tile21, SpriteKind.Scenery)
-    tiles.placeOnTile(TreeBottomLeft, value)
-    tiles.setTileAt(value, myTiles.tile0)
-}
-for (let value of tiles.getTilesByType(myTiles.tile22)) {
-    TreeBottomRight = sprites.create(myTiles.tile22, SpriteKind.Scenery)
-    tiles.placeOnTile(TreeBottomRight, value)
-    tiles.setTileAt(value, myTiles.tile0)
-}
+AddScenery()
 game.onUpdate(function () {
     if (controller.right.isPressed()) {
         thePlayer.vx += 23
@@ -862,21 +917,21 @@ game.onUpdate(function () {
     } else {
         StoredObjectSpace.setImage(img`
 1 1 1 1 . . . . 1 1 1 1 
-1 4 4 4 4 4 4 4 4 4 4 1 
-1 4 2 2 2 4 4 2 2 2 4 1 
-1 4 4 2 2 2 2 2 2 4 4 1 
-. 4 4 2 2 2 2 2 2 4 4 . 
-. 4 2 2 2 2 2 2 2 2 4 . 
-. 4 2 2 2 2 2 2 2 2 4 . 
-. 4 4 2 2 2 2 2 2 4 4 . 
-1 4 4 2 2 2 2 2 2 4 4 1 
-1 4 2 2 2 4 4 2 2 2 4 1 
-1 4 4 4 4 4 4 4 4 4 4 1 
+1 . 3 3 3 3 4 4 4 4 . 1 
+1 3 3 1 1 1 1 1 1 4 4 1 
+1 3 1 2 2 2 2 2 2 1 4 1 
+. 3 1 2 2 4 3 2 2 1 2 . 
+. 3 1 2 4 3 3 3 2 1 2 . 
+. 3 1 2 2 4 3 2 2 1 2 . 
+. 4 1 2 2 4 3 2 2 1 2 . 
+1 4 1 2 2 2 2 2 2 1 2 1 
+1 4 4 1 1 1 1 1 1 2 2 1 
+1 . 4 4 4 2 2 2 2 2 . 1 
 1 1 1 1 . . . . 1 1 1 1 
 `)
     }
-    playerTileRow = Math.round(thePlayer.y / 16)
-    playerTileColumn = Math.ceil(thePlayer.x / 16)
+    playerTileRow = thePlayer.y / 16
+    playerTileColumn = thePlayer.x / 16
 })
 forever(function () {
     if (controller.left.isPressed() || controller.right.isPressed()) {
@@ -914,16 +969,16 @@ forever(function () {
                 if (thePlayer.isHittingTile(CollisionDirection.Bottom)) {
                     if (BlockStore == 1) {
                         if (FlipHoriz == 1) {
-                            if (thePlayer.tileKindAt(TileDirection.Left, myTiles.tile0)) {
-                                tiles.setTileAt(tiles.getTileLocation(playerTileColumn - 1, playerTileRow), myTiles.tile23)
-                                tiles.setWallAt(tiles.getTileLocation(playerTileColumn - 1, playerTileRow), true)
+                            if (thePlayer.tileKindAt(TileDirection.Left, myTiles.tile0) && playerTileColumn >= 1) {
+                                tiles.setTileAt(tiles.getTileLocation(Math.floor(playerTileColumn - 1), playerTileRow), myTiles.tile23)
+                                tiles.setWallAt(tiles.getTileLocation(Math.floor(playerTileColumn - 1), playerTileRow), true)
                                 pause(200)
                                 BlockStore = 0
                             }
                         } else {
-                            if (thePlayer.tileKindAt(TileDirection.Right, myTiles.tile0)) {
-                                tiles.setTileAt(tiles.getTileLocation(playerTileColumn + 0, playerTileRow), myTiles.tile23)
-                                tiles.setWallAt(tiles.getTileLocation(playerTileColumn + 0, playerTileRow), true)
+                            if (thePlayer.tileKindAt(TileDirection.Right, myTiles.tile0) && playerTileColumn < LevelWidth - 1) {
+                                tiles.setTileAt(tiles.getTileLocation(Math.ceil(playerTileColumn + 0), playerTileRow), myTiles.tile23)
+                                tiles.setWallAt(tiles.getTileLocation(Math.ceil(playerTileColumn + 0), playerTileRow), true)
                                 pause(200)
                                 BlockStore = 0
                             }
