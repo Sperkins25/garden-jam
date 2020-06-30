@@ -5,6 +5,9 @@ namespace SpriteKind {
     export const Snail = SpriteKind.create()
     export const TheSnailExit = SpriteKind.create()
     export const SnailEntrance = SpriteKind.create()
+    export const Item = SpriteKind.create()
+    export const TheTNT = SpriteKind.create()
+    export const Explosion = SpriteKind.create()
 }
 namespace myTiles {
     //% blockIdentity=images._tile
@@ -520,7 +523,327 @@ d 3 2 4 4 1 2 4 2 1 2 2 1 4 . .
 2 4 4 4 4 4 4 4 4 4 4 4 4 4 4 3 
 2 4 4 4 4 4 4 4 4 4 4 4 4 4 4 3 
 `
+    //% blockIdentity=images._tile
+    export const tile28 = img`
+4 2 1 1 1 1 1 1 1 1 1 1 1 1 2 4 
+4 4 4 1 1 1 1 1 1 1 1 1 1 2 3 4 
+4 4 2 2 2 2 2 2 2 2 2 2 2 2 3 1 
+1 4 3 4 4 4 4 4 4 4 4 4 4 3 4 3 
+3 1 4 3 3 3 3 3 3 3 3 3 3 2 4 3 
+3 4 2 2 2 2 2 2 2 2 2 2 2 2 4 3 
+3 4 3 4 4 4 4 4 4 4 4 4 4 3 1 4 
+3 1 4 3 3 3 3 3 3 3 3 3 3 2 4 4 
+3 3 2 2 2 2 2 2 2 2 2 2 2 2 4 4 
+3 3 3 4 4 4 4 4 4 4 4 4 4 3 1 1 
+2 3 4 3 3 3 3 3 3 3 3 3 3 2 1 1 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 
+2 2 3 4 4 4 4 4 4 4 4 4 4 3 2 1 
+1 2 4 3 3 3 3 3 3 3 3 3 3 2 2 1 
+1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 1 
+1 1 3 4 4 4 4 4 4 4 4 4 4 3 1 1 
+`
+    //% blockIdentity=images._tile
+    export const tile29 = img`
+1 1 4 3 3 3 3 3 3 3 3 3 3 2 1 1 
+1 1 2 2 2 2 2 2 2 2 2 2 2 2 1 1 
+1 1 3 4 4 4 4 4 4 4 4 4 4 3 1 1 
+1 1 4 3 3 3 3 3 3 3 3 3 3 2 1 1 
+1 1 2 2 2 2 2 2 2 2 2 2 2 2 1 1 
+1 1 3 4 4 4 4 4 4 4 4 4 4 3 1 1 
+1 1 4 3 3 3 3 3 3 3 3 3 3 2 1 1 
+1 1 2 2 2 2 2 2 2 2 2 2 2 2 1 1 
+1 1 3 4 4 4 4 4 4 4 4 4 4 3 1 1 
+1 1 4 3 3 3 3 3 3 3 3 3 3 2 1 1 
+1 1 2 2 2 2 2 2 2 2 2 2 2 2 1 1 
+1 1 3 4 4 4 4 4 4 4 4 4 4 3 1 1 
+1 1 4 3 3 3 3 3 3 3 3 3 3 2 1 1 
+1 1 2 2 2 2 2 2 2 2 2 2 2 2 1 1 
+1 1 3 4 4 4 4 4 4 4 4 4 4 3 1 1 
+1 1 2 3 3 3 3 3 3 3 3 3 3 2 1 1 
+`
+    //% blockIdentity=images._tile
+    export const tile30 = img`
+1 1 4 3 3 3 3 3 3 3 3 3 3 2 1 1 
+1 1 2 2 2 2 2 2 2 2 2 2 2 2 1 1 
+1 1 2 4 4 4 4 4 4 4 4 4 4 4 2 2 
+1 1 2 4 4 4 4 4 4 4 4 4 4 4 4 2 
+1 1 2 4 4 4 4 4 4 4 4 4 4 4 4 3 
+1 1 2 4 4 4 4 4 4 4 4 4 4 4 4 3 
+1 1 2 4 4 4 4 4 4 4 4 4 4 4 4 3 
+1 1 2 4 4 4 4 4 4 4 4 4 4 4 4 3 
+1 1 2 3 4 4 4 4 4 4 4 4 4 4 4 3 
+1 1 2 2 3 4 4 4 4 4 4 4 4 4 4 3 
+1 1 1 2 3 4 4 4 4 4 4 4 4 4 4 3 
+1 1 1 2 3 4 4 4 4 4 4 4 4 4 4 3 
+1 1 1 1 2 2 3 4 4 4 4 4 4 4 4 2 
+1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+`
+    //% blockIdentity=images._tile
+    export const tile31 = img`
+1 1 1 1 1 1 1 2 1 1 1 1 2 2 3 3 
+1 1 1 1 1 1 1 1 1 1 1 1 2 3 3 3 
+3 2 2 3 2 2 3 2 2 3 2 2 3 2 2 2 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 2 1 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 1 1 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 1 1 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 1 1 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 1 1 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 1 1 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 1 1 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 1 1 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 1 1 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 2 1 
+3 2 2 3 2 2 3 2 2 3 2 2 3 2 2 2 
+1 1 1 1 2 2 2 1 1 1 3 3 3 2 2 2 
+1 1 1 1 1 2 2 1 1 1 3 3 3 2 2 2 
+`
+    //% blockIdentity=images._tile
+    export const tile32 = img`
+. 3 3 3 3 3 3 1 3 3 3 3 3 3 3 . 
+3 2 2 2 2 2 2 1 2 2 2 2 2 2 2 3 
+3 2 2 2 2 2 2 2 1 2 2 2 2 2 2 3 
+3 2 2 2 2 2 2 2 1 2 2 2 2 2 2 3 
+3 2 2 2 2 2 2 1 2 1 2 2 2 2 2 3 
+3 2 2 2 2 2 1 1 2 2 1 2 2 2 2 3 
+3 2 2 2 2 2 1 2 2 2 2 1 2 2 2 3 
+3 2 2 2 2 1 2 2 2 2 2 1 2 2 2 3 
+3 2 2 2 1 2 2 2 2 2 2 1 2 2 2 3 
+3 2 2 1 2 1 2 2 2 2 2 2 1 2 2 3 
+3 2 2 1 2 2 1 2 2 2 2 2 1 2 2 3 
+3 2 1 2 2 2 2 1 2 2 2 2 2 2 2 3 
+3 2 2 2 2 2 1 2 1 2 2 2 2 2 2 3 
+3 2 2 2 2 2 1 2 2 2 2 2 2 2 2 3 
+3 2 2 2 2 1 2 2 2 2 2 2 2 2 2 3 
+. 3 3 3 3 3 3 3 3 3 3 3 3 3 3 . 
+`
+    //% blockIdentity=images._tile
+    export const tile33 = img`
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+3 2 2 3 2 2 3 2 2 3 2 2 3 2 2 3 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+4 2 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+3 2 2 3 2 2 3 2 2 3 2 2 3 2 2 3 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+`
+    //% blockIdentity=images._tile
+    export const tile34 = img`
+1 1 1 1 1 1 1 2 1 1 1 1 2 2 3 3 
+1 1 1 1 1 1 3 1 1 1 1 1 2 3 3 3 
+1 1 1 1 1 2 2 1 2 2 3 3 2 3 3 3 
+1 1 1 1 1 2 2 1 2 2 3 3 2 3 3 1 
+1 1 1 1 1 1 2 1 2 1 3 1 2 3 1 2 
+1 1 1 1 1 1 1 1 1 1 1 2 2 1 2 2 
+1 1 1 1 1 1 1 2 2 1 1 2 2 2 2 2 
+1 1 1 1 1 1 2 2 2 1 1 2 2 2 3 3 
+1 1 1 1 1 1 2 2 1 1 1 3 3 2 3 3 
+1 1 1 1 1 1 2 1 1 2 2 3 3 3 1 3 
+1 1 1 1 1 1 1 1 1 2 2 1 3 3 1 1 
+1 1 1 1 1 1 1 3 1 2 1 2 1 3 2 1 
+1 1 1 1 1 2 2 1 1 1 1 2 2 1 2 2 
+1 1 1 1 1 2 2 2 1 1 1 3 3 2 2 2 
+1 1 1 1 1 2 2 2 1 1 3 3 3 2 2 2 
+1 1 1 1 1 1 2 2 1 1 3 3 1 2 2 2 
+`
+    //% blockIdentity=images._tile
+    export const tile35 = img`
+2 3 1 1 3 3 1 1 1 2 2 1 1 1 1 1 
+4 4 3 1 3 3 1 1 2 2 2 1 1 1 1 1 
+4 4 3 2 2 3 1 1 2 2 1 1 1 1 1 1 
+4 4 3 2 2 1 1 1 2 1 1 1 1 1 1 1 
+4 1 3 3 3 1 1 1 1 3 3 1 1 1 1 1 
+1 4 4 3 3 3 1 2 2 1 3 1 1 1 1 1 
+4 4 4 3 3 3 1 2 2 1 1 1 1 1 1 1 
+4 4 4 2 3 3 3 1 2 1 1 1 1 1 1 1 
+4 4 1 3 3 3 3 1 1 1 1 1 1 1 1 1 
+4 1 3 3 3 1 3 1 1 1 2 2 1 1 1 1 
+1 3 3 2 3 1 1 1 1 1 2 2 1 1 1 1 
+2 4 4 4 2 1 2 2 1 1 2 1 1 1 1 1 
+2 4 4 4 4 1 2 2 2 1 1 1 1 1 1 1 
+2 1 4 4 4 1 1 2 2 1 1 1 1 1 1 1 
+2 3 1 4 4 1 1 1 2 3 1 1 1 1 1 1 
+4 4 3 1 4 1 1 1 1 3 3 1 1 1 1 1 
+`
+    //% blockIdentity=images._tile
+    export const tile36 = img`
+. 3 3 3 3 3 3 1 3 3 3 3 3 3 3 . 
+3 2 2 2 2 2 2 1 2 2 2 2 2 2 2 3 
+3 2 2 2 2 2 2 2 1 2 2 2 2 2 2 3 
+3 2 2 2 2 2 2 2 1 2 2 2 2 2 2 3 
+3 2 2 2 2 2 2 1 2 1 2 2 2 2 2 3 
+3 2 2 2 2 2 1 1 2 2 1 2 2 2 2 3 
+3 2 2 2 2 2 1 2 2 2 2 1 2 2 2 3 
+3 2 2 2 2 2 2 2 2 2 2 1 2 2 2 3 
+3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 
+3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 
+3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 
+3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 
+3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 
+3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 
+3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 
+. 3 3 3 3 3 3 3 3 3 3 3 3 3 3 . 
+`
+    //% blockIdentity=images._tile
+    export const tile37 = img`
+. 3 3 3 3 3 3 1 3 3 3 3 3 3 3 . 
+3 2 2 2 2 2 2 1 2 2 2 2 2 2 2 3 
+3 2 2 2 2 2 1 2 1 2 2 2 2 2 2 3 
+3 2 2 2 2 1 2 2 1 2 2 2 2 1 2 3 
+3 2 2 2 1 2 2 1 2 1 2 2 2 2 1 3 
+3 2 2 1 1 2 1 1 2 2 1 2 2 2 2 1 
+3 2 1 2 2 2 1 2 2 2 2 1 2 2 2 3 
+3 2 1 2 2 1 2 2 2 2 2 1 2 2 1 3 
+3 1 2 2 1 2 2 2 2 2 2 1 2 2 2 1 
+3 2 2 1 2 1 2 2 2 2 2 2 1 2 2 3 
+3 2 2 1 2 2 1 2 2 2 2 2 1 2 2 3 
+3 2 1 2 2 2 2 1 2 2 2 1 2 2 2 3 
+3 1 2 2 2 2 1 2 1 2 1 2 1 2 2 3 
+3 1 2 2 2 2 1 2 2 2 1 2 2 1 2 3 
+3 2 1 2 2 1 2 2 2 2 1 2 2 2 1 3 
+. 3 1 3 3 3 3 3 3 1 3 3 3 3 1 2 
+`
 }
+function ClearLevel () {
+    for (let value of sprites.allOfKind(SpriteKind.HudStoredObject)) {
+        value.destroy()
+    }
+    for (let value of sprites.allOfKind(SpriteKind.Scenery)) {
+        value.destroy()
+    }
+    for (let value of sprites.allOfKind(SpriteKind.Snail)) {
+        value.destroy()
+    }
+    for (let value of sprites.allOfKind(SpriteKind.TheSnailExit)) {
+        value.destroy()
+    }
+    for (let value of sprites.allOfKind(SpriteKind.SnailEntrance)) {
+        value.destroy()
+    }
+    for (let value of sprites.allOfKind(SpriteKind.SnailEntrance)) {
+        value.destroy()
+    }
+}
+function ChangeLevel () {
+    ClearLevel()
+    if (Level == 1) {
+        LevelWidth = 26
+        SnailsRemaining = 10
+        SnailsSpawned = 0
+        tiles.setTilemap(tiles.createTilemap(
+            hex`1a001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101100000000000000000000000000000000000000000000000012130000000000000000000000000000000000000a160e0f000d1415190000171700180000000000000000000001020202020202020202020202021b030000000000000000000004050505050505050505050505051d1e0000000103000e0f1a0004050505050505050505050505050506000d0004060102020203040505050505050505050505050505060102020203040505050604050505050505050505050505050506040505050604050505060405050505050505050505050505050604050505060405050506040505050505050505050505050505060405050506040505050607080808080808080808080808080809070808080907080808090000000000000000000000000000000000000000000000000000`,
+            img`
+. . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . 2 . . . . . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . 2 2 . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+. . . . . . . . . . . . . . . . 2 2 2 2 2 2 2 2 2 2 
+. . . . . . . . . . . . . . . . 2 2 2 2 2 2 2 2 2 2 
+. . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . 
+`,
+            [myTiles.tile0,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile18,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37],
+            TileScale.Sixteen
+        ))
+    }
+    if (Level == 2) {
+        LevelWidth = 36
+        SnailsRemaining = 10
+        SnailsSpawned = 0
+        tiles.setTilemap(tiles.createTilemap(
+            hex`24001400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016000000000000000000000000000000000000000000000000000010110000000000000102020300000000000000000000000000000000000000000000000012130000220000000000002100000200000000000000000000000000000000000000000a141500002219000e0f000021000d0000000000000000000000000000000000000000010202030000070808080808230902020002000000000000000000000000000000000000040505060000000000000000000000210000000000000000000000000000000000000000040505062200000d00181800000000210000020000000000000000000000000000000000040505060102020202020202021b02030000000000000000101100000000000000000000040505060405050505050505051c05060000000200000000121300000000000000000000070808090405050505050505051c05060000000000181817141500170000000000000000050505050405050505050505051d201e000000000001020202021b03000000000000000005050505040505050505050505050506000d00000004050505051d1e00000e0f00001a00010202020708080808080808080808090202020203040505050505060102020202020203040505050505050505050505050505050505050506040505050505060405050505050506040505050505050505050505050505050505050506070808080808090405050505050506000000000000000000000000000000000000000000000000000000000000000000000000`,
+            img`
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . 2 2 2 2 . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . 2 . . . . . . 2 . . 2 . . . . . . . . . . . . . . . . . . . 
+. . . . . . 2 . . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 . . 2 2 2 2 2 2 2 2 2 2 . 2 . . . . . . . . . . . . . . . . . . 
+2 2 2 2 . . . . . . . . . . . 2 . . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 . . . . . . . . . . 2 . . 2 . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . 2 . . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . 2 2 2 2 2 2 2 . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . 2 2 2 2 2 2 2 . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+`,
+            [myTiles.tile0,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile18,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37],
+            TileScale.Sixteen
+        ))
+    }
+    AddScenery()
+}
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    let PowerUp = ""
+    if (PowerUp == "Apple" && itemCount < 0) {
+        projectile = sprites.createProjectileFromSprite(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . 1 . . . . . . . 
+. . . . . . . 1 . . . . . . . . 
+. . . . . . 4 1 4 . . . . . . . 
+. . . . . 3 4 4 4 4 . . . . . . 
+. . . . . 3 3 3 4 4 . . . . . . 
+. . . . . 3 3 3 4 2 . . . . . . 
+. . . . . . 3 3 2 . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, thePlayer, 110 * Right, -44)
+        projectile.ay = 150
+        itemCount += -1
+    }
+    if (PowerUp == "TNT" && (thePlayer.isHittingTile(CollisionDirection.Bottom) && itemCount < 0)) {
+        TNT = sprites.create(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 
+1 2 4 3 2 4 3 2 4 3 2 4 3 2 2 1 
+1 2 4 3 2 4 3 2 4 3 2 4 3 2 2 1 
+1 2 2 3 2 2 3 2 2 3 2 2 3 2 2 1 
+1 4 1 1 1 4 1 4 4 1 4 1 1 1 4 1 
+1 4 4 1 4 4 1 1 4 1 4 4 1 4 4 1 
+1 4 4 1 4 4 1 4 1 1 4 4 1 4 4 1 
+1 4 4 1 4 4 1 4 4 1 4 4 1 4 4 1 
+1 2 2 3 2 2 3 2 2 3 2 2 3 2 2 1 
+1 2 4 3 2 4 3 2 4 3 2 4 3 2 2 1 
+1 2 4 3 2 4 3 2 4 3 2 4 3 2 2 1 
+1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+`, SpriteKind.TheTNT)
+        itemCount += -1
+    }
+})
 function DrawHud () {
     ObjectStoredText = sprites.create(img`
 1 1 . . 1 . . . 1 . . . 1 1 . 1 . 1 
@@ -608,7 +931,6 @@ d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
     StoredObjectSpace.setFlag(SpriteFlag.RelativeToCamera, true)
     BlockStore = 0
     thePlayer.z = 1
-    AddScenery()
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (!(controller.down.isPressed())) {
@@ -623,6 +945,102 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
             jumpsRemaining += -1
         }
     }
+})
+sprites.onDestroyed(SpriteKind.TheTNT, function (sprite) {
+    TNTExplode = sprites.create(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, SpriteKind.Explosion)
+    TNTExplode.setPosition(TNTx, TNTy)
+    TNTExplode.lifespan = 500
+    animation.runImageAnimation(
+    TNTExplode,
+    [img`
+. . . . . . . . . . . . . . . . 
+. . . . . 3 3 3 3 3 3 . . . . . 
+. . . . 3 4 4 4 4 4 4 3 . . . . 
+. . . 3 4 4 4 4 4 4 4 4 3 . . . 
+. . 3 4 4 4 4 4 4 4 4 4 4 3 . . 
+. 3 4 4 4 4 4 4 4 4 4 4 4 4 3 . 
+. 3 4 4 4 4 4 4 4 4 4 4 4 4 3 . 
+. 3 4 4 4 4 4 4 4 4 4 4 4 4 3 . 
+. 3 4 4 4 4 4 4 4 4 4 4 4 4 3 . 
+. 3 4 4 4 4 4 4 4 4 4 4 4 4 3 . 
+. 3 4 4 4 4 4 4 4 4 4 4 4 4 3 . 
+. . 3 4 4 4 4 4 4 4 4 4 4 3 . . 
+. . . 3 4 4 4 4 4 4 4 4 3 . . . 
+. . . . 3 4 4 4 4 4 4 3 . . . . 
+. . . . . 3 3 3 3 3 3 . . . . . 
+. . . . . . . . . . . . . . . . 
+`,img`
+. . . . 3 3 3 3 3 3 3 3 . . . . 
+. . . 3 3 4 4 4 4 4 4 3 3 . . . 
+. . 3 3 4 4 4 4 4 4 4 4 3 3 . . 
+. 3 3 4 4 4 4 4 4 4 4 4 4 3 3 . 
+3 3 4 4 4 4 4 4 4 4 4 4 4 4 3 3 
+3 4 4 4 4 4 . . . . 4 4 4 4 4 3 
+3 4 4 4 4 . . . . . . 4 4 4 4 3 
+3 4 4 4 4 . . . . . . 4 4 4 4 3 
+3 4 4 4 4 . . . . . . 4 4 4 4 3 
+3 4 4 4 4 . . . . . . 4 4 4 4 3 
+3 4 4 4 4 4 . . . . 4 4 4 4 4 3 
+3 3 4 4 4 4 4 4 4 4 4 4 4 4 3 3 
+. 3 3 4 4 4 4 4 4 4 4 4 4 3 3 . 
+. . 3 3 4 4 4 4 4 4 4 4 3 3 . . 
+. . . 3 3 4 4 4 4 4 4 3 3 . . . 
+. . . . 3 3 3 3 3 3 3 3 . . . . 
+`,img`
+. . . . . . . . . . . . . . . . 
+. . 4 . . 3 . . . 4 . . . 4 . . 
+. . . 4 . . . . . . . . 3 . . 4 
+. . 4 . . . 4 . . . . 4 . . . . 
+. . . . 4 . . . . 2 . . . . . . 
+4 . . . . . 2 4 . . . 4 . 2 . . 
+. . . . . . . . 4 . . . . . . . 
+. . 3 . 2 . 2 . . 4 . 2 . . 3 . 
+. . . . . . . 4 . . . . . . . . 
+. . . 4 . . . . . . . 4 . . . . 
+. 4 . . . 3 . 2 . 4 . . . 2 . . 
+. . . 4 . . . . . . . 3 . . . . 
+. 4 . . . . . . . . . . . 4 . . 
+. . . . 2 . . 4 . 2 . . 4 . 4 . 
+. . 4 . . . . . . . 4 . . . . . 
+. 4 . . . . . . . . . . 4 . . . 
+`,img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`],
+    100,
+    false
+    )
 })
 sprites.onOverlap(SpriteKind.Snail, SpriteKind.TheSnailExit, function (sprite, otherSprite) {
     SnailsRemaining += -1
@@ -752,8 +1170,45 @@ sprites.onOverlap(SpriteKind.Snail, SpriteKind.TheSnailExit, function (sprite, o
     100,
     false
     )
+    if (SnailsRemaining < 1) {
+        game.splash("Next Level")
+        Level += 1
+        pause(1000)
+        ChangeLevel()
+    }
+})
+sprites.onCreated(SpriteKind.TheTNT, function (sprite) {
+    sprite.setPosition(thePlayer.x, thePlayer.y + 2)
+    sprite.lifespan = 5000
+    TNTx = sprite.x
+    TNTy = sprite.y
+    for (let index = 0; index < 2; index++) {
+        pause(500)
+        sprite.setFlag(SpriteFlag.Invisible, true)
+        pause(100)
+        sprite.setFlag(SpriteFlag.Invisible, false)
+        pause(500)
+    }
+    for (let index = 0; index < 3; index++) {
+        pause(200)
+        sprite.setFlag(SpriteFlag.Invisible, true)
+        pause(100)
+        sprite.setFlag(SpriteFlag.Invisible, false)
+        pause(200)
+    }
+    for (let index = 0; index < 8; index++) {
+        pause(50)
+        sprite.setFlag(SpriteFlag.Invisible, true)
+        pause(25)
+        sprite.setFlag(SpriteFlag.Invisible, false)
+        pause(50)
+    }
 })
 function AddScenery () {
+    for (let value of tiles.getTilesByType(myTiles.tile11)) {
+        tiles.placeOnRandomTile(thePlayer, myTiles.tile11)
+        tiles.setTileAt(value, myTiles.tile0)
+    }
     for (let value of tiles.getTilesByType(myTiles.tile14)) {
         smallBush = sprites.create(myTiles.tile14, SpriteKind.Scenery)
         tiles.placeOnTile(smallBush, value)
@@ -830,12 +1285,10 @@ function AddScenery () {
 let SnailAnimFrame = 0
 let playerTileColumn = 0
 let playerTileRow = 0
-let Right = 0
 let FlipHoriz = 0
 let GlidingAnim = 0
 let animationFrame = 0
 let SnailSprite: Sprite = null
-let SnailsSpawned = 0
 let SnailExit: Sprite = null
 let SnailEntrance: Sprite = null
 let gateRight: Sprite = null
@@ -849,7 +1302,9 @@ let BushRight: Sprite = null
 let BushLeft: Sprite = null
 let TreeTopLeft: Sprite = null
 let smallBush: Sprite = null
-let SnailsRemaining = 0
+let TNTy = 0
+let TNTx = 0
+let TNTExplode: Sprite = null
 let jumpsRemaining = 0
 let BlockStore = 0
 let StoredObjectSpace: Sprite = null
@@ -858,36 +1313,20 @@ let SnailCounter: Sprite = null
 let OutOf10: Sprite = null
 let SnailCountHud: Sprite = null
 let ObjectStoredText: Sprite = null
+let TNT: Sprite = null
+let Right = 0
+let projectile: Sprite = null
+let itemCount = 0
+let SnailsSpawned = 0
+let SnailsRemaining = 0
+let LevelWidth = 0
+let Level = 0
 let thePlayer: Sprite = null
 color.setColor(1, color.rgb(45, 27, 0))
 color.setColor(2, color.rgb(30, 96, 110))
 color.setColor(3, color.rgb(90, 185, 168))
 color.setColor(4, color.rgb(196, 240, 194))
 color.setColor(5, color.rgb(152, 183, 152))
-tiles.setTilemap(tiles.createTilemap(
-            hex`1a001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101100000000000000000000000000000000000000000000000012130000000000000000000000000000000000000a160e0f000d14151900001717001800000000000000000000010202020202020202020202020202030000000103000e0f1a0004050505050505050505050505050506000d00040601020202030405050505050505050505050505050601020202030405050506040505050505050505050505050505060405050506040505050604050505050505050505050505050506040505050604050505060405050505050505050505050505050604050505060405050506070808080808080808080808080808090708080809070808080900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
-            img`
-. . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . 2 . . . . . . . . . . . . . . . . . . . . . . . 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . 2 2 . . . . . 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . 2 2 2 2 2 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-. . . . . . . . . . . . . . . . 2 2 2 2 2 2 2 2 2 2 
-. . . . . . . . . . . . . . . . 2 2 2 2 2 2 2 2 2 2 
-. . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . 
-`,
-            [myTiles.tile0,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile18,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27],
-            TileScale.Sixteen
-        ))
-let LevelWidth = 26
 scene.setBackgroundColor(5)
 thePlayer = sprites.create(img`
 . . . . . . . . . 1 . . 1 . . . 
@@ -908,10 +1347,8 @@ thePlayer = sprites.create(img`
 . . . . . 1 1 . 1 1 . . . . . . 
 `, SpriteKind.Player)
 scene.cameraFollowSprite(thePlayer)
-for (let value of tiles.getTilesByType(myTiles.tile11)) {
-    tiles.placeOnRandomTile(thePlayer, myTiles.tile11)
-    tiles.setTileAt(value, myTiles.tile0)
-}
+Level = 2
+ChangeLevel()
 DrawHud()
 let SnailCountImage = [img`
 . 1 . . 
@@ -1025,9 +1462,9 @@ game.onUpdateInterval(2000, function () {
 `, SpriteKind.Snail)
             SnailSprite.setPosition(value.x, value.y)
             SnailsSpawned += 1
-            SnailsRemaining += 1
         }
         for (let value of sprites.allOfKind(SpriteKind.Snail)) {
+            sprites.setDataNumber(value, "Gravity", 8)
             sprites.setDataNumber(value, "Right", 1)
             sprites.setDataNumber(value, "Home", 0)
         }
@@ -1181,47 +1618,47 @@ game.onUpdate(function () {
     if (thePlayer.vy < 0 && jumpsRemaining == 1) {
         thePlayer.setImage(img`
 . . . . . . . . . . . . . . . . 
-. . . . . . . 1 1 . 1 . . . . . 
-. . . . . . 1 2 . 2 4 . . . . . 
-. . . . . . 4 4 4 4 . . . . . . 
-. . . 2 1 2 4 1 4 1 2 . . . . . 
-. . 1 2 2 2 4 4 4 4 . . 2 . . . 
-. 1 1 2 1 2 3 3 2 2 . . 2 . . . 
-. 2 2 2 2 2 4 1 3 3 . . 2 . . . 
-. 2 1 1 2 2 1 3 3 4 2 . . . . . 
-. 2 1 1 2 1 3 3 3 3 . . . . . . 
-. . 2 2 2 1 3 3 4 3 . . . . . . 
-. . . . 2 1 4 4 3 . . . . . . . 
-. . . . 3 3 1 3 1 . . . . . . . 
+. . . . . . . . 1 1 . 1 . . . . 
+. . . . . . . 1 2 . 2 4 . . . . 
+. . . . . . . 4 4 4 4 . . . . . 
+. . . . 2 1 2 4 1 4 1 2 . . . . 
+. . . 1 2 2 2 4 4 4 4 . . 2 . . 
+. . 1 1 2 1 2 3 3 2 2 . . 2 . . 
+. . 2 2 2 2 2 4 1 3 3 . . 2 . . 
+. . 2 1 1 2 2 1 3 3 4 2 . . . . 
+. . 2 1 1 2 1 3 3 3 3 . . . . . 
+. . . 2 2 2 1 3 3 4 3 . . . . . 
+. . . . . 2 1 4 4 3 . . . . . . 
+. . . . . 3 3 1 3 1 . . . . . . 
+. . . . . . . 1 . . 1 . . . . . 
+. . . . . . . 1 . . 1 . . . . . 
 . . . . . . 1 . . 1 . . . . . . 
-. . . . . . 1 . . 1 . . . . . . 
+. . . . . . 1 . 1 . . . . . . . 
 . . . . . 1 . . 1 . . . . . . . 
-. . . . . 1 . 1 . . . . . . . . 
-. . . . 1 . . 1 . . . . . . . . 
-. . . . . 1 . . . . . . . . . . 
+. . . . . . 1 . . . . . . . . . 
 `)
     }
     if (thePlayer.vy > 0 && !(thePlayer.isHittingTile(CollisionDirection.Bottom))) {
         thePlayer.setImage(img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-. . . . . . . 1 1 . 1 . . . . . 
-. . . . . . 1 2 . 2 4 1 . . . . 
-. . . . . . 4 4 4 4 . . . . . . 
-. . . 2 2 2 4 1 4 1 . 2 . . . . 
-. . 1 2 2 2 4 4 4 4 . . 2 . . . 
-. 1 1 2 1 2 3 3 2 2 . 2 . . . . 
-. 2 2 2 1 2 4 1 3 3 2 2 . . . . 
-. 2 2 2 2 2 1 3 3 4 . . . . . . 
-. 2 1 1 2 1 3 3 3 3 . . . . . . 
-. . 1 1 2 1 3 3 4 3 . . . . . . 
-. . . . 2 1 4 4 3 . . . . . . . 
-. . . . 3 3 1 3 1 1 1 . 1 . . . 
-. . . . . 1 1 . . . . 1 . . . . 
-. . . . . . 1 . . . . . . . . . 
-. . . . . . . 1 . . . . . . . . 
+. . . . . . . . 1 1 . 1 . . . . 
+. . . . . . . 1 2 . 2 4 1 . . . 
+. . . . . . . 4 4 4 4 . . . . . 
+. . . . 2 2 2 4 1 4 1 . 2 . . . 
+. . . 1 2 2 2 4 4 4 4 . . 2 . . 
+. . 1 1 2 1 2 3 3 2 2 . 2 . . . 
+. . 2 2 2 1 2 4 1 3 3 2 2 . . . 
+. . 2 2 2 2 2 1 3 3 4 . . . . . 
+. . 2 1 1 2 1 3 3 3 3 . . . . . 
+. . . 1 1 2 1 3 3 4 3 . . . . . 
+. . . . . 2 1 4 4 3 . . . . . . 
+. . . . . 3 3 1 3 1 1 1 . 1 . . 
+. . . . . . 1 1 . . . . 1 . . . 
 . . . . . . . 1 . . . . . . . . 
 . . . . . . . . 1 . . . . . . . 
+. . . . . . . . 1 . . . . . . . 
+. . . . . . . . . 1 . . . . . . 
 `)
     }
     if (thePlayer.isHittingTile(CollisionDirection.Bottom)) {
@@ -1322,41 +1759,8 @@ game.onUpdate(function () {
     playerTileRow = thePlayer.y / 16
     playerTileColumn = thePlayer.x / 16
     for (let value of sprites.allOfKind(SpriteKind.Snail)) {
-        if (value.tileKindAt(TileDirection.Left, myTiles.tile7) && value.isHittingTile(CollisionDirection.Left)) {
-            sprites.setDataNumber(value, "Right", 1)
-        }
-        if (value.tileKindAt(TileDirection.Right, myTiles.tile5) && value.isHittingTile(CollisionDirection.Right)) {
-            sprites.setDataNumber(value, "Right", -1)
-        }
-        if (value.tileKindAt(TileDirection.Right, myTiles.tile2) && value.isHittingTile(CollisionDirection.Right)) {
-            if (value.isHittingTile(CollisionDirection.Bottom)) {
-                value.y += -16
-                value.x += 8
-            }
-        }
-        if (value.tileKindAt(TileDirection.Left, myTiles.tile4) && value.isHittingTile(CollisionDirection.Left)) {
-            if (value.isHittingTile(CollisionDirection.Bottom)) {
-                value.y += -16
-                value.x += -8
-            }
-        }
-        if (value.tileKindAt(TileDirection.Right, myTiles.tile23) && value.isHittingTile(CollisionDirection.Right)) {
-            if (value.isHittingTile(CollisionDirection.Bottom)) {
-                value.y += -16
-                value.x += 8
-            }
-        }
-        if (value.tileKindAt(TileDirection.Left, myTiles.tile23) && value.isHittingTile(CollisionDirection.Left)) {
-            if (value.isHittingTile(CollisionDirection.Bottom)) {
-                value.y += -16
-                value.x += -8
-            }
-        }
-        if (value.tileKindAt(TileDirection.Right, myTiles.tile5) && value.isHittingTile(CollisionDirection.Right)) {
-            sprites.setDataNumber(value, "Right", -1)
-        }
         value.vx = 15 * sprites.readDataNumber(value, "Right")
-        value.vy += 15
+        value.vy += sprites.readDataNumber(value, "Gravity")
         value.setImage(img`
 . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . 
@@ -1447,6 +1851,62 @@ forever(function () {
     pause(100)
 })
 forever(function () {
+    for (let value of sprites.allOfKind(SpriteKind.Snail)) {
+        if (value.tileKindAt(TileDirection.Left, myTiles.tile35) && value.isHittingTile(CollisionDirection.Left)) {
+            sprites.setDataNumber(value, "Right", 1)
+        }
+        if (value.tileKindAt(TileDirection.Right, myTiles.tile34) && value.isHittingTile(CollisionDirection.Right)) {
+            sprites.setDataNumber(value, "Right", -1)
+        }
+        if (value.tileKindAt(TileDirection.Left, myTiles.tile7) && value.isHittingTile(CollisionDirection.Left)) {
+            sprites.setDataNumber(value, "Right", 1)
+        }
+        if (value.tileKindAt(TileDirection.Right, myTiles.tile5) && value.isHittingTile(CollisionDirection.Right)) {
+            sprites.setDataNumber(value, "Right", -1)
+        }
+        if (value.tileKindAt(TileDirection.Right, myTiles.tile2) && value.isHittingTile(CollisionDirection.Right)) {
+            if (value.isHittingTile(CollisionDirection.Bottom)) {
+                sprites.setDataNumber(value, "Gravity", 0)
+                for (let index = 0; index < 8; index++) {
+                    value.y += -2
+                    pause(20)
+                }
+                sprites.setDataNumber(value, "Gravity", 8)
+            }
+        }
+        if (value.tileKindAt(TileDirection.Left, myTiles.tile4) && value.isHittingTile(CollisionDirection.Left)) {
+            if (value.isHittingTile(CollisionDirection.Bottom)) {
+                sprites.setDataNumber(value, "Gravity", 0)
+                for (let index = 0; index < 8; index++) {
+                    value.y += -2
+                    pause(20)
+                }
+                sprites.setDataNumber(value, "Gravity", 8)
+            }
+        }
+        if (value.tileKindAt(TileDirection.Right, myTiles.tile23) && value.isHittingTile(CollisionDirection.Right)) {
+            if (value.isHittingTile(CollisionDirection.Bottom)) {
+                sprites.setDataNumber(value, "Gravity", 0)
+                for (let index = 0; index < 8; index++) {
+                    value.y += -2
+                    pause(20)
+                }
+                sprites.setDataNumber(value, "Gravity", 8)
+            }
+        }
+        if (value.tileKindAt(TileDirection.Left, myTiles.tile23) && value.isHittingTile(CollisionDirection.Left)) {
+            if (value.isHittingTile(CollisionDirection.Bottom)) {
+                sprites.setDataNumber(value, "Gravity", 0)
+                for (let index = 0; index < 8; index++) {
+                    value.y += -2
+                    pause(20)
+                }
+                sprites.setDataNumber(value, "Gravity", 8)
+            }
+        }
+    }
+})
+forever(function () {
     if (controller.down.isPressed() && controller.A.isPressed()) {
         if (BlockStore == 0) {
             if (thePlayer.tileKindAt(TileDirection.Bottom, myTiles.tile23)) {
@@ -1481,6 +1941,27 @@ forever(function () {
             }
         }
     }
+    if (thePlayer.tileKindAt(TileDirection.Bottom, myTiles.tile36)) {
+        for (let value of tiles.getTilesByType(myTiles.tile36)) {
+            pause(200)
+            tiles.setTileAt(value, myTiles.tile32)
+            tiles.setWallAt(value, true)
+        }
+    }
+    if (thePlayer.tileKindAt(TileDirection.Bottom, myTiles.tile32)) {
+        for (let value of tiles.getTilesByType(myTiles.tile32)) {
+            pause(500)
+            tiles.setTileAt(value, myTiles.tile37)
+            tiles.setWallAt(value, true)
+        }
+    }
+    if (thePlayer.tileKindAt(TileDirection.Bottom, myTiles.tile37)) {
+        for (let value of tiles.getTilesByType(myTiles.tile37)) {
+            pause(500)
+            tiles.setTileAt(value, myTiles.tile0)
+            tiles.setWallAt(value, false)
+        }
+    }
 })
 forever(function () {
     SnailAnimFrame = 1
@@ -1489,5 +1970,16 @@ forever(function () {
     pause(200)
 })
 forever(function () {
-	
+    for (let value of sprites.allOfKind(SpriteKind.Snail)) {
+        if (value.tileKindAt(TileDirection.Bottom, myTiles.tile28)) {
+            value.vy = -50
+            pause(300)
+            value.setFlag(SpriteFlag.Invisible, true)
+            pause(500)
+            tiles.placeOnRandomTile(value, myTiles.tile31)
+            value.y += -5
+            value.x += 12
+            value.setFlag(SpriteFlag.Invisible, false)
+        }
+    }
 })
