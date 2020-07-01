@@ -8,6 +8,7 @@ namespace SpriteKind {
     export const Item = SpriteKind.create()
     export const TheTNT = SpriteKind.create()
     export const Explosion = SpriteKind.create()
+    export const TNTWorld = SpriteKind.create()
 }
 namespace myTiles {
     //% blockIdentity=images._tile
@@ -713,6 +714,196 @@ d 3 2 4 4 1 2 4 2 1 2 2 1 4 . .
 3 2 1 2 2 1 2 2 2 2 1 2 2 2 1 3 
 . 3 1 3 3 3 3 3 3 1 3 3 3 3 1 2 
 `
+    //% blockIdentity=images._tile
+    export const tile38 = img`
+. . . . . . . . . . . 2 2 4 4 2 
+. . . . . . . . . . . 3 3 3 2 2 
+. . . . . . . . . . . 3 3 3 2 2 
+. . . . . . . . . . . 2 4 4 4 2 
+. . . . . . . . . . . 2 2 3 3 3 
+. . . . . . . . . . . 2 2 3 3 3 
+. . . . . . . . . . . 2 4 4 2 2 
+. . . . . . . . . . . 3 3 3 2 2 
+. . . . . . . . . . . 3 3 3 2 2 
+. . . . . . . . . . . 4 4 4 4 2 
+. . . . . . . . . . . 2 2 3 3 3 
+. . . . . . . . . . . 2 2 3 3 3 
+. . . . . . . . . . . 2 4 4 4 2 
+. . . . . . . . . . . 3 3 3 2 2 
+. . . . . . . . . . . 3 3 3 2 2 
+. . . . . . . . . . . 2 2 4 4 2 
+`
+    //% blockIdentity=images._tile
+    export const tile39 = img`
+2 4 2 2 2 . . . . . . . . . . . 
+3 3 3 2 2 . . . . . . . . . . . 
+3 3 3 2 2 . . . . . . . . . . . 
+2 4 4 4 2 . . . . . . . . . . . 
+2 2 3 3 3 . . . . . . . . . . . 
+2 2 3 3 3 . . . . . . . . . . . 
+2 2 4 4 2 . . . . . . . . . . . 
+3 3 3 2 2 . . . . . . . . . . . 
+3 3 3 2 2 . . . . . . . . . . . 
+2 4 4 4 2 . . . . . . . . . . . 
+2 4 3 3 3 . . . . . . . . . . . 
+2 2 3 3 3 . . . . . . . . . . . 
+2 4 4 4 2 . . . . . . . . . . . 
+3 3 3 2 2 . . . . . . . . . . . 
+3 3 3 2 2 . . . . . . . . . . . 
+2 2 4 4 2 . . . . . . . . . . . 
+`
+    //% blockIdentity=images._tile
+    export const tile40 = img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . 2 2 2 2 2 2 2 2 2 
+. . . . . . . 2 2 2 2 2 2 2 2 2 
+. . . . . . . 2 4 4 4 4 4 4 2 2 
+. . . . . . . 3 3 3 3 3 3 3 3 3 
+. . . . . . . 2 2 2 2 2 2 2 2 2 
+`
+    //% blockIdentity=images._tile
+    export const tile41 = img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 4 4 4 4 2 2 2 4 4 4 4 4 2 2 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`
+    //% blockIdentity=images._tile
+    export const tile42 = img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 . . . . . . 
+2 2 2 2 2 2 2 2 2 2 . . . . . . 
+2 4 4 2 2 2 4 4 2 2 . . . . . . 
+3 3 3 3 3 3 3 3 3 3 . . . . . . 
+2 2 2 2 2 2 2 2 2 2 . . . . . . 
+`
+    //% blockIdentity=images._tile
+    export const tile43 = img`
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`
+    //% blockIdentity=images._tile
+    export const tile44 = img`
+4 2 1 1 1 1 1 1 1 1 1 1 1 1 2 4 
+4 4 4 1 1 1 1 1 1 1 1 1 1 2 3 4 
+4 4 2 2 2 2 2 2 2 2 2 2 2 2 3 1 
+1 4 3 4 4 4 4 4 4 4 4 4 4 3 4 3 
+3 1 4 3 3 3 3 3 3 3 3 3 3 2 4 3 
+3 4 2 2 2 2 2 2 2 2 2 2 2 2 4 3 
+3 4 3 4 4 4 4 4 4 4 4 4 4 3 1 4 
+3 1 4 3 3 3 3 3 3 3 3 3 3 2 4 4 
+3 3 2 2 2 2 2 2 2 2 2 2 2 2 4 4 
+3 3 3 4 4 4 4 4 4 4 4 4 4 3 1 1 
+2 3 4 3 3 3 3 3 3 3 3 3 3 2 1 3 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 1 
+3 2 3 4 4 4 4 4 4 4 4 4 4 3 2 1 
+1 2 4 3 3 3 3 3 3 3 3 3 3 2 2 1 
+3 1 2 2 2 2 2 2 2 2 2 2 2 2 2 1 
+1 1 3 4 4 4 4 4 4 4 4 4 4 3 1 1 
+`
+    //% blockIdentity=images._tile
+    export const tile45 = img`
+1 1 4 3 3 3 3 3 3 3 3 3 3 2 1 1 
+1 1 2 2 2 2 2 2 2 2 2 2 2 2 1 1 
+2 2 4 4 4 4 4 4 4 4 4 4 4 4 1 1 
+2 4 4 4 4 4 4 4 4 4 4 4 4 4 1 1 
+3 4 4 4 4 4 4 4 4 4 4 4 4 4 1 1 
+3 4 4 4 4 4 4 4 4 4 4 4 4 4 1 1 
+3 4 4 4 4 4 4 4 4 4 4 4 4 4 1 1 
+3 4 4 4 4 4 4 4 4 4 4 4 4 4 1 1 
+3 4 4 4 4 4 4 4 4 4 4 4 4 4 1 1 
+3 4 4 4 4 4 4 4 4 4 4 4 4 4 1 1 
+3 4 4 4 4 4 4 4 4 4 4 4 4 1 1 1 
+3 4 4 4 4 4 4 4 4 4 4 4 1 1 1 1 
+4 4 4 4 4 4 4 4 4 4 4 1 1 1 1 1 
+2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+`
+    //% blockIdentity=images._tile
+    export const tile46 = img`
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+3 2 2 3 2 2 3 2 2 3 2 2 3 2 2 3 
+1 2 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+1 1 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+1 1 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+1 1 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+1 1 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+1 1 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+1 1 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+1 1 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+1 1 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+1 2 3 4 2 3 4 2 3 4 2 3 4 2 3 4 
+3 2 2 3 2 2 3 2 2 3 2 2 3 2 2 3 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+`
+    //% blockIdentity=images._tile
+    export const tile47 = img`
+. 4 2 4 4 4 4 4 2 2 4 4 4 4 4 . 
+4 4 2 2 4 4 4 4 4 2 2 3 4 2 2 4 
+4 4 3 2 2 . 4 4 4 . 2 2 2 2 4 4 
+4 4 4 3 2 2 . 4 4 2 2 2 2 4 4 4 
+4 4 4 4 3 2 2 4 4 4 2 2 3 4 . 2 
+4 4 4 4 4 3 2 4 4 4 . 2 2 . 2 2 
+4 4 4 4 . 2 2 2 4 4 4 3 2 2 2 4 
+4 4 4 . 2 2 4 4 4 4 4 4 3 2 4 4 
+4 4 4 2 2 4 4 4 3 2 2 2 2 2 4 4 
+4 4 4 2 2 4 4 4 4 3 2 2 . 4 4 4 
+4 4 2 2 3 2 2 4 . 4 3 2 4 4 4 4 
+4 4 2 . 4 3 2 . 4 4 4 2 2 3 4 4 
+4 4 . 4 4 4 2 2 4 4 4 . 2 2 4 4 
+4 4 4 4 4 4 3 2 4 4 4 4 . 2 3 4 
+4 4 2 2 . 4 4 4 4 4 4 4 4 4 . 4 
+. 4 2 4 4 4 4 4 4 4 4 4 4 4 4 . 
+`
 }
 function ClearLevel () {
     for (let value of sprites.allOfKind(SpriteKind.HudStoredObject)) {
@@ -734,6 +925,59 @@ function ClearLevel () {
         value.destroy()
     }
 }
+sprites.onDestroyed(SpriteKind.Explosion, function (sprite) {
+    if (TNTExplode.tileKindAt(TileDirection.Right, myTiles.tile47)) {
+        for (let value of tiles.getTilesByType(myTiles.tile47)) {
+            tiles.setTileAt(value, myTiles.tile0)
+            tiles.setWallAt(value, false)
+        }
+    }
+})
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (PowerUp == "Apple" && itemCount > 0) {
+        projectile = sprites.createProjectileFromSprite(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . 1 . . . . . . . 
+. . . . . . . 1 . . . . . . . . 
+. . . . . . 4 1 4 . . . . . . . 
+. . . . . 3 4 4 4 4 . . . . . . 
+. . . . . 3 3 3 4 4 . . . . . . 
+. . . . . 3 3 3 4 2 . . . . . . 
+. . . . . . 3 3 2 . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, thePlayer, 110 * Right, -44)
+        projectile.ay = 150
+        itemCount += -1
+    }
+    if (PowerUp == "TNT" && (thePlayer.isHittingTile(CollisionDirection.Bottom) && itemCount > 0)) {
+        TNT = sprites.create(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 
+1 2 4 3 2 4 3 2 4 3 2 4 3 2 2 1 
+1 2 4 3 2 4 3 2 4 3 2 4 3 2 2 1 
+1 2 2 3 2 2 3 2 2 3 2 2 3 2 2 1 
+1 4 1 1 1 4 1 4 4 1 4 1 1 1 4 1 
+1 4 4 1 4 4 1 1 4 1 4 4 1 4 4 1 
+1 4 4 1 4 4 1 4 1 1 4 4 1 4 4 1 
+1 4 4 1 4 4 1 4 4 1 4 4 1 4 4 1 
+1 2 2 3 2 2 3 2 2 3 2 2 3 2 2 1 
+1 2 4 3 2 4 3 2 4 3 2 4 3 2 2 1 
+1 2 4 3 2 4 3 2 4 3 2 4 3 2 2 1 
+1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+`, SpriteKind.TheTNT)
+        itemCount += -1
+    }
+})
 function ChangeLevel () {
     ClearLevel()
     if (Level == 1) {
@@ -741,7 +985,7 @@ function ChangeLevel () {
         SnailsRemaining = 10
         SnailsSpawned = 0
         tiles.setTilemap(tiles.createTilemap(
-            hex`1a001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101100000000000000000000000000000000000000000000000012130000000000000000000000000000000000000a160e0f000d1415190000171700180000000000000000000001020202020202020202020202021b030000000000000000000004050505050505050505050505051d1e0000000103000e0f1a0004050505050505050505050505050506000d0004060102020203040505050505050505050505050505060102020203040505050604050505050505050505050505050506040505050604050505060405050505050505050505050505050604050505060405050506040505050505050505050505050505060405050506040505050607080808080808080808080808080809070808080907080808090000000000000000000000000000000000000000000000000000`,
+            hex`1a001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101100000000000000000000000000000000000000000000000012130000000000000000000000000000000000000a160e0f000d1415190000171700180000000000000000000002020202020202020202020202021b030000000000000000000005050505050505050505050505051d1e0000000103000e0f1a0005050505050505050505050505050506000d0004060102020203050505050505050505050505050505060102020203040505050605050505050505050505050505050506040505050604050505060505050505050505050505050505050604050505060405050506050505050505050505050505050505060405050506040505050608080808080808080808080808080809070808080907080808090000000000000000000000000000000000000000000000000000`,
             img`
 . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -760,7 +1004,7 @@ function ChangeLevel () {
 . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . 
 `,
-            [myTiles.tile0,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile18,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37],
+            [myTiles.tile0,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile18,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47],
             TileScale.Sixteen
         ))
     }
@@ -769,7 +1013,7 @@ function ChangeLevel () {
         SnailsRemaining = 10
         SnailsSpawned = 0
         tiles.setTilemap(tiles.createTilemap(
-            hex`24001400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016000000000000000000000000000000000000000000000000000010110000000000000102020300000000000000000000000000000000000000000000000012130000220000000000002100000200000000000000000000000000000000000000000a141500002219000e0f000021000d0000000000000000000000000000000000000000010202030000070808080808230902020002000000000000000000000000000000000000040505060000000000000000000000210000000000000000000000000000000000000000040505062200000d00181800000000210000020000000000000000000000000000000000040505060102020202020202021b02030000000000000000101100000000000000000000040505060405050505050505051c05060000000200000000121300000000000000000000070808090405050505050505051c05060000000000181817141500170000000000000000050505050405050505050505051d201e000000000001020202021b03000000000000000005050505040505050505050505050506000d00000004050505051d1e00000e0f00001a00010202020708080808080808080808090202020203040505050505060102020202020203040505050505050505050505050505050505050506040505050505060405050505050506040505050505050505050505050505050505050506070808080808090405050505050506000000000000000000000000000000000000000000000000000000000000000000000000`,
+            hex`24001400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016000000000000000000000000000000000000000000000000000010110000000000000102020300000000000000000000000000000000000000000000000012130000220000000000002100000200000000000000000000000000000000000000000a141500002219000e0f000021000d0000000000000000000000000000000000000000010202030000070808080808230902020002000000000000000000000000000000000000040505060000000000000000000000210000000000000000000000000000000000000000040505062200000d00181800000000210000020000000000000000000000000000000000040505060102020202020202021b02030000000000000000101100000000000000000000040505060405050505050505051c05060000000200000000121300000000000000000000070808090405050505050505051c05060000000000181817141500170000000000000000050505050405050505050505051d201e000000000001020202020203000000000000000005050505040505050505050505050506000d0000000405050505050600000e0f00001a00010202020708080808080808080808090202020203040505050505060102020202020203040505050505050505050505050505050505050506040505050505060405050505050506040505050505050505050505050505050505050506070808080808090405050505050506000000000000000000000000000000000000000000000000000000000000000000000000`,
             img`
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -792,57 +1036,120 @@ function ChangeLevel () {
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 `,
-            [myTiles.tile0,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile18,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37],
+            [myTiles.tile0,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile18,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47],
             TileScale.Sixteen
         ))
     }
+    if (Level == 3) {
+        LevelWidth = 36
+        SnailsRemaining = 10
+        SnailsSpawned = 0
+        tiles.setTilemap(tiles.createTilemap(
+            hex`240014000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018001a0018000000000000000000000000000000000000000000000000000000000000000102020203000000000000000001000000000000000000000000000000000000000000000405050505030000000000000004000000000000000000000000000000000000000000000405050505050300000000000004000000000000000000000000000000101100000000000405050505050503000000000004000000000000000000000000000000121300000000000000000000000000000000000004000000000000000000000000000000141500000e0f0000000000000000000001020202020000000000000000000000000000000102021b02030000000000000000000105050505050000000000000000000000000000010505051c05060000000000000000010505050505050000000000000000000000000001050505051c0506000000000000000105050505050505000a0d0000000000001717000105050505051d201e000000000001030505050505050505020203000000000000010203050505050505050506000000000004060505050505050505050506001900160000040506050505050505050506010202020304060505050505050505050506020202020202040506050505050505050506050505050604060505050505050505`,
+            img`
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . 2 2 2 2 2 . . . . . . . . 2 
+. . . . . . . . . . . . . . . . . . . . . . 2 2 2 2 2 2 . . . . . . . 2 
+. . . . . . . . . . . . . . . . . . . . . . 2 2 2 2 2 2 2 . . . . . . 2 
+. . . . . . . . . . . . . . . . . . . . . . 2 2 2 2 2 2 2 2 . . . . . 2 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 2 2 2 
+. . . . . . . . . . . . . . . 2 2 2 2 2 2 . . . . . . . . . 2 2 2 2 2 2 
+. . . . . . . . . . . . . . 2 2 2 2 2 2 2 . . . . . . . . 2 2 2 2 2 2 2 
+. . . . . . . . . . . . . 2 2 2 2 2 2 2 2 . . . . . . . 2 2 2 2 2 2 2 2 
+. . . . . . . . . . . . 2 2 2 2 2 2 2 2 2 . . . . . 2 2 2 2 2 2 2 2 2 2 
+2 2 2 . . . . . . 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . 2 2 2 2 2 2 2 2 2 2 
+2 2 2 . . . 2 . . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile18,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47],
+            TileScale.Sixteen
+        ))
+    }
+    if (Level == 4) {
+        LevelWidth = 36
+        SnailsRemaining = 10
+        SnailsSpawned = 0
+        tiles.setTilemap(tiles.createTilemap(
+            hex`24001800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000010110400000000000000000000000000000000000000000000000000030000000000000012130400000000000000000000000000000000000000000000000000060000000000000014150400000000000000000000000000000000000000000000000000060000000000000d0102030000000000000000000000000000000000000000000000000006000000000000010505060000000000000000000000000000000000000000000000000006190a0000000004050506000000000000000000000000000000000000000000000000000102020203000103050506000000000e0f000000000000000000000000000000000000000708080809000406050506000001020202020203000000000000000000000000000000000600000000000406050506000000000000000000000000000000000000000000001a0d000600000000000406050506030000000000000000001011000000000000000001020202020600000e0f000406080809060000000000000000001213000000000000000105050505050623010202020203010203060200000000000000001415000000000000010505050505050600070808080809040506050602000000000000000103000000000001050505050505050600000000000000040506050506020000000000000506000000000105050505050505050600000000000000040506000000000002000000000001022b02030405050505050505050600000016000000040506000000000000000000000004051c05060405050505050505050601020202020200040506000000272829000002000004051c0506040505050505050505060708080808080007080900000d252a260d0000000004051c05060405050505050505050600000000000000000000000001020202030000000004051c0506040505050505050505060000000000171717171700000405050506000e0f002e2d2c0506040505050505050505010202020202020202020202020405050506020202020405050506040505050505050505`,
+            img`
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . 
+2 . . . . . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . 
+2 . . . . . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . 
+2 . . . . . . . 2 2 2 . . . . . . . . . . . . . . . . . . . . . . . . . 
+2 . . . . . . 2 2 2 2 . . . . . . . . . . . . . . . . . . . . . . . . . 
+2 . . . . . . 2 2 2 2 . . . . . . . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 . 2 2 2 2 2 . . . . . . . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 . 2 2 2 2 2 . . 2 2 2 2 2 2 2 . . . . . . . . . . . . . . . . 
+2 . . . . . 2 2 2 2 2 . . . . . . . . . . . . . . . . . . . . . . . . . 
+2 . . . . . 2 2 2 2 2 2 . . . . . . . . . . . . . . . . . . . 2 2 2 2 2 
+2 . . . . . 2 2 2 2 2 2 . . . . . . . . . . . . . . . . . . 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . . . . . . . . . . . . 2 2 2 2 2 2 2 
+2 . 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . . . 2 2 . . . . . 2 2 2 2 2 2 2 2 
+2 . . . . . . . 2 2 2 2 2 2 2 . . . . . . 2 2 . . . . 2 2 2 2 2 2 2 2 2 
+2 . . . . . . . 2 2 2 . . . . . 2 . . . . . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 . . . 2 . . . 2 2 2 . . . . . . . . . . . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 . 2 2 2 . . . . . . . . 2 . . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 . 2 2 2 . . . . . . . . . . . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 . . . . . . . . . . . . 2 2 2 2 2 . . . . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 . . . . . . . . . . . . 2 2 2 2 2 . . . . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile18,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47],
+            TileScale.Sixteen
+        ))
+    }
+    if (Level == 5) {
+        game.over(true, color.FadeToWhite)
+    }
     AddScenery()
 }
-controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    let PowerUp = ""
-    if (PowerUp == "Apple" && itemCount < 0) {
-        projectile = sprites.createProjectileFromSprite(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . 1 . . . . . . . 
-. . . . . . . 1 . . . . . . . . 
-. . . . . . 4 1 4 . . . . . . . 
-. . . . . 3 4 4 4 4 . . . . . . 
-. . . . . 3 3 3 4 4 . . . . . . 
-. . . . . 3 3 3 4 2 . . . . . . 
-. . . . . . 3 3 2 . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`, thePlayer, 110 * Right, -44)
-        projectile.ay = 150
-        itemCount += -1
-    }
-    if (PowerUp == "TNT" && (thePlayer.isHittingTile(CollisionDirection.Bottom) && itemCount < 0)) {
-        TNT = sprites.create(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 
-1 2 4 3 2 4 3 2 4 3 2 4 3 2 2 1 
-1 2 4 3 2 4 3 2 4 3 2 4 3 2 2 1 
-1 2 2 3 2 2 3 2 2 3 2 2 3 2 2 1 
-1 4 1 1 1 4 1 4 4 1 4 1 1 1 4 1 
-1 4 4 1 4 4 1 1 4 1 4 4 1 4 4 1 
-1 4 4 1 4 4 1 4 1 1 4 4 1 4 4 1 
-1 4 4 1 4 4 1 4 4 1 4 4 1 4 4 1 
-1 2 2 3 2 2 3 2 2 3 2 2 3 2 2 1 
-1 2 4 3 2 4 3 2 4 3 2 4 3 2 2 1 
-1 2 4 3 2 4 3 2 4 3 2 4 3 2 2 1 
-1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-`, SpriteKind.TheTNT)
-        itemCount += -1
-    }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Item, function (sprite, otherSprite) {
+    otherSprite.destroy()
+    PowerUp = "Apple"
+    itemCount = 5
+    StoredItemSpace.setImage(img`
+1 1 1 1 . . . . 1 1 1 1 
+1 . . . . . . . . . . 1 
+1 . . . . 1 . . . . . 1 
+1 . . . . . 1 . . . . 1 
+. . . . 2 2 1 4 . . . . 
+. . . 2 2 4 2 4 4 . . . 
+. . . 2 4 4 4 4 4 . . . 
+. . . 2 4 4 4 4 3 . . . 
+1 . . 2 4 4 4 3 3 . . 1 
+1 . . . 2 3 3 3 . . . 1 
+1 . . . . . . . . . . 1 
+1 1 1 1 . . . . 1 1 1 1 
+`)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.TNTWorld, function (sprite, otherSprite) {
+    otherSprite.destroy()
+    PowerUp = "TNT"
+    itemCount = 1
+    StoredItemSpace.setImage(img`
+1 1 1 1 . . . . 1 1 1 1 
+1 . 3 3 3 3 3 3 3 3 . 1 
+1 3 4 4 4 4 4 4 4 4 3 1 
+1 3 4 4 4 4 4 4 4 4 3 1 
+. 3 2 2 2 2 2 2 2 2 3 . 
+. 3 1 1 1 4 4 1 1 1 3 . 
+. 3 4 1 4 1 1 4 1 4 3 . 
+. 3 4 1 4 1 4 4 1 4 3 . 
+1 3 2 2 2 2 2 2 2 2 3 1 
+1 3 4 4 4 4 4 4 4 4 3 1 
+1 . 3 3 3 3 3 3 3 3 . 1 
+1 1 1 1 . . . . 1 1 1 1 
+`)
 })
 function DrawHud () {
     ObjectStoredText = sprites.create(img`
@@ -854,9 +1161,21 @@ function DrawHud () {
 1 . 1 . 1 . . 1 . 1 . 1 . . . 1 . 1 
 1 1 . . 1 1 . . 1 . . . 1 1 . 1 . 1 
 `, SpriteKind.HudBarTop)
-    ObjectStoredText.setPosition(40, 8)
+    ObjectStoredText.setPosition(69, 8)
     ObjectStoredText.setFlag(SpriteFlag.RelativeToCamera, true)
-    ObjectStoredText.z = 1
+    ObjectStoredText.z = 5
+    ItemStoredText = sprites.create(img`
+1 . 1 1 1 . 1 1 . 1 . . . 1 
+1 . . 1 . . 1 . . 1 1 . 1 1 
+1 . . 1 . . 1 . . 1 . 1 . 1 
+1 . . 1 . . 1 1 . 1 . 1 . 1 
+1 . . 1 . . 1 . . 1 . . . 1 
+1 . . 1 . . 1 . . 1 . . . 1 
+1 . . 1 . . 1 1 . 1 . . . 1 
+`, SpriteKind.HudBarTop)
+    ItemStoredText.setPosition(10, 8)
+    ItemStoredText.setFlag(SpriteFlag.RelativeToCamera, true)
+    ItemStoredText.z = 5
     SnailCountHud = sprites.create(img`
 . 1 1 . 1 . . 1 . . 1 . . 1 . 1 . . . 1 1 
 1 . . . 1 1 . 1 . 1 . 1 . 1 . 1 . . 1 . . 
@@ -866,9 +1185,9 @@ function DrawHud () {
 . . 1 . 1 . 1 1 . 1 . 1 . 1 . 1 . . . . 1 
 1 1 . . 1 . . 1 . 1 . 1 . 1 . 1 1 . 1 1 . 
 `, SpriteKind.HudBarTop)
-    SnailCountHud.setPosition(110, 8)
+    SnailCountHud.setPosition(120, 8)
     SnailCountHud.setFlag(SpriteFlag.RelativeToCamera, true)
-    SnailCountHud.z = 1
+    SnailCountHud.z = 5
     OutOf10 = sprites.create(img`
 . . . 1 . . . 1 . . . 1 . 
 . . . 1 . . 1 1 . . 1 . 1 
@@ -878,9 +1197,9 @@ function DrawHud () {
 . 1 . . . . . 1 . . 1 . 1 
 . 1 . . . . 1 1 1 . . 1 . 
 `, SpriteKind.HudBarTop)
-    OutOf10.setPosition(141, 8)
+    OutOf10.setPosition(151, 8)
     OutOf10.setFlag(SpriteFlag.RelativeToCamera, true)
-    OutOf10.z = 1
+    OutOf10.z = 5
     SnailCounter = sprites.create(img`
 . 1 . . 
 1 . 1 . 
@@ -891,8 +1210,28 @@ function DrawHud () {
 . 1 . . 
 `, SpriteKind.HudBarTop)
     SnailCounter.setFlag(SpriteFlag.RelativeToCamera, true)
-    SnailCounter.setPosition(133, 8)
-    SnailCounter.z = 1
+    SnailCounter.setPosition(143, 8)
+    SnailCounter.z = 5
+    ItemCounter = sprites.create(img`
+. 1 . . 
+1 . 1 . 
+1 . 1 . 
+1 . 1 . 
+1 . 1 . 
+1 . 1 . 
+. 1 . . 
+`, SpriteKind.HudBarTop)
+    ItemCounter.setFlag(SpriteFlag.RelativeToCamera, true)
+    ItemCounter.setPosition(42, 8)
+    ItemCounter.z = 5
+    ItemCounterX = sprites.create(img`
+1 . 1 
+. 1 . 
+1 . 1 
+`, SpriteKind.HudBarTop)
+    ItemCounterX.setFlag(SpriteFlag.RelativeToCamera, true)
+    ItemCounterX.setPosition(35, 8)
+    ItemCounterX.z = 5
     HudBar = sprites.create(img`
 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
@@ -927,10 +1266,26 @@ d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
 1 . . . . . . . . . . 1 
 1 1 1 1 . . . . 1 1 1 1 
 `, SpriteKind.HudStoredObject)
-    StoredObjectSpace.setPosition(57, 8)
+    StoredObjectSpace.setPosition(87, 8)
     StoredObjectSpace.setFlag(SpriteFlag.RelativeToCamera, true)
+    StoredItemSpace = sprites.create(img`
+1 1 1 1 . . . . 1 1 1 1 
+1 . . . . . . . . . . 1 
+1 . . . . . . . . . . 1 
+1 . . . . . . . . . . 1 
+. . . . . . . . . . . . 
+. . . . . . . . . . . . 
+. . . . . . . . . . . . 
+. . . . . . . . . . . . 
+1 . . . . . . . . . . 1 
+1 . . . . . . . . . . 1 
+1 . . . . . . . . . . 1 
+1 1 1 1 . . . . 1 1 1 1 
+`, SpriteKind.HudStoredObject)
+    StoredItemSpace.setPosition(25, 8)
+    StoredItemSpace.setFlag(SpriteFlag.RelativeToCamera, true)
     BlockStore = 0
-    thePlayer.z = 1
+    thePlayer.z = 5
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (!(controller.down.isPressed())) {
@@ -1170,7 +1525,7 @@ sprites.onOverlap(SpriteKind.Snail, SpriteKind.TheSnailExit, function (sprite, o
     100,
     false
     )
-    if (SnailsRemaining < 1) {
+    if (SnailsRemaining == 0) {
         game.splash("Next Level")
         Level += 1
         pause(1000)
@@ -1241,6 +1596,26 @@ function AddScenery () {
         tiles.setTileAt(value, myTiles.tile0)
     }
     for (let value of tiles.getTilesByType(myTiles.tile19)) {
+        ApplePickup = sprites.create(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . 1 . . . . . . . 
+. . . . . . . 1 . . . . . . . . 
+. . . . . . 4 1 4 . . . . . . . 
+. . . . . 4 3 4 4 4 . . . . . . 
+. . . . . 3 3 4 4 2 . . . . . . 
+. . . . . 4 4 4 4 2 . . . . . . 
+. . . . . . 4 2 2 . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, SpriteKind.Item)
+        ApplePickup.ay = 100
+        tiles.placeOnTile(ApplePickup, value)
         TreeMiddleLeft = sprites.create(myTiles.tile19, SpriteKind.Scenery)
         tiles.placeOnTile(TreeMiddleLeft, value)
         tiles.setTileAt(value, myTiles.tile0)
@@ -1249,6 +1624,27 @@ function AddScenery () {
         TreeMiddleRight = sprites.create(myTiles.tile20, SpriteKind.Scenery)
         tiles.placeOnTile(TreeMiddleRight, value)
         tiles.setTileAt(value, myTiles.tile0)
+    }
+    for (let value of tiles.getTilesByType(myTiles.tile43)) {
+        TNTWorldObject = sprites.create(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
+. 3 4 4 4 4 4 4 4 4 4 4 4 4 3 . 
+. 3 2 2 2 2 2 2 2 2 2 2 2 2 3 . 
+. 3 4 4 4 4 4 4 4 4 4 4 4 4 3 . 
+. 3 2 2 2 2 2 2 2 2 2 2 2 2 3 . 
+. 3 1 1 1 4 1 4 4 1 4 1 1 1 3 . 
+. 3 4 1 4 4 1 1 4 1 4 4 1 4 3 . 
+. 3 4 1 4 4 1 4 1 1 4 4 1 4 3 . 
+. 3 4 1 4 4 1 4 4 1 4 4 1 4 3 . 
+. 3 2 2 2 2 2 2 2 2 2 2 2 2 3 . 
+. 3 4 4 4 4 4 4 4 4 4 4 4 4 3 . 
+. 3 2 2 2 2 2 2 2 2 2 2 2 2 3 . 
+. 3 4 4 4 4 4 4 4 4 4 4 4 4 3 . 
+. . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
+`, SpriteKind.TNTWorld)
+        tiles.placeOnTile(TNTWorldObject, value)
     }
     for (let value of tiles.getTilesByType(myTiles.tile21)) {
         TreeBottomLeft = sprites.create(myTiles.tile21, SpriteKind.Scenery)
@@ -1270,6 +1666,7 @@ function AddScenery () {
         gateRight = sprites.create(myTiles.tile25, SpriteKind.Scenery)
         tiles.placeOnTile(gateRight, value)
         tiles.setTileAt(value, myTiles.tile0)
+        gateRight.z = 2
     }
     for (let value of tiles.getTilesByType(myTiles.tile26)) {
         SnailEntrance = sprites.create(myTiles.tile26, SpriteKind.SnailEntrance)
@@ -1295,8 +1692,10 @@ let gateRight: Sprite = null
 let gateLeft: Sprite = null
 let TreeBottomRight: Sprite = null
 let TreeBottomLeft: Sprite = null
+let TNTWorldObject: Sprite = null
 let TreeMiddleRight: Sprite = null
 let TreeMiddleLeft: Sprite = null
+let ApplePickup: Sprite = null
 let TreeTopRight: Sprite = null
 let BushRight: Sprite = null
 let BushLeft: Sprite = null
@@ -1304,22 +1703,27 @@ let TreeTopLeft: Sprite = null
 let smallBush: Sprite = null
 let TNTy = 0
 let TNTx = 0
-let TNTExplode: Sprite = null
 let jumpsRemaining = 0
 let BlockStore = 0
 let StoredObjectSpace: Sprite = null
 let HudBar: Sprite = null
+let ItemCounterX: Sprite = null
+let ItemCounter: Sprite = null
 let SnailCounter: Sprite = null
 let OutOf10: Sprite = null
 let SnailCountHud: Sprite = null
+let ItemStoredText: Sprite = null
 let ObjectStoredText: Sprite = null
+let StoredItemSpace: Sprite = null
+let SnailsSpawned = 0
+let SnailsRemaining = 0
+let LevelWidth = 0
 let TNT: Sprite = null
 let Right = 0
 let projectile: Sprite = null
 let itemCount = 0
-let SnailsSpawned = 0
-let SnailsRemaining = 0
-let LevelWidth = 0
+let PowerUp = ""
+let TNTExplode: Sprite = null
 let Level = 0
 let thePlayer: Sprite = null
 color.setColor(1, color.rgb(45, 27, 0))
@@ -1347,10 +1751,99 @@ thePlayer = sprites.create(img`
 . . . . . 1 1 . 1 1 . . . . . . 
 `, SpriteKind.Player)
 scene.cameraFollowSprite(thePlayer)
-Level = 2
+Level = 1
 ChangeLevel()
 DrawHud()
 let SnailCountImage = [img`
+. 1 . . 
+1 . 1 . 
+1 . 1 . 
+1 . 1 . 
+1 . 1 . 
+1 . 1 . 
+. 1 . . 
+`, img`
+. 1 . . 
+1 1 . . 
+. 1 . . 
+. 1 . . 
+. 1 . . 
+. 1 . . 
+1 1 1 . 
+`, img`
+. 1 . . 
+1 . 1 . 
+. . 1 . 
+. 1 . . 
+1 . . . 
+1 . . . 
+1 1 1 . 
+`, img`
+. 1 . . 
+1 . 1 . 
+. . 1 . 
+. 1 . . 
+. . 1 . 
+1 . 1 . 
+. 1 . . 
+`, img`
+. . 1 . 
+. 1 . . 
+. 1 . . 
+1 . . . 
+1 . 1 . 
+1 1 1 1 
+. . 1 . 
+`, img`
+1 1 1 . 
+1 . . . 
+1 . . . 
+. 1 . . 
+. . 1 . 
+. . 1 . 
+1 1 . . 
+`, img`
+. 1 1 . 
+1 . . . 
+1 . . . 
+1 1 1 . 
+1 . . 1 
+1 . . 1 
+. 1 1 . 
+`, img`
+1 1 1 . 
+. . 1 . 
+. . 1 . 
+. 1 . . 
+. 1 . . 
+1 . . . 
+1 . . . 
+`, img`
+. 1 . . 
+1 . 1 . 
+1 . 1 . 
+. 1 . . 
+1 . 1 . 
+1 . 1 . 
+. 1 . . 
+`, img`
+. 1 . . 
+1 . 1 . 
+1 . 1 . 
+. 1 1 . 
+. . 1 . 
+. . 1 . 
+. 1 . . 
+`, img`
+. 1 . . 1 . . 
+1 1 . 1 . 1 . 
+. 1 . 1 . 1 . 
+. 1 . 1 . 1 . 
+. 1 . 1 . 1 . 
+. 1 . 1 . 1 . 
+1 1 1 . 1 . . 
+`]
+let ItemCountImage = [img`
 . 1 . . 
 1 . 1 . 
 1 . 1 . 
@@ -1460,6 +1953,7 @@ game.onUpdateInterval(2000, function () {
 . . 1 3 4 1 1 2 2 2 2 1 4 3 1 . 
 . . . 1 1 1 1 1 1 1 1 1 1 1 1 . 
 `, SpriteKind.Snail)
+            SnailSprite.z = -1
             SnailSprite.setPosition(value.x, value.y)
             SnailsSpawned += 1
         }
@@ -1825,10 +2319,16 @@ game.onUpdate(function () {
     }
     SnailCounter.setImage(SnailCountImage[SnailsRemaining])
     if (SnailsRemaining == 10) {
-        SnailCounter.x = 131
+        SnailCounter.x = 141
     } else {
-        SnailCounter.x = 133
+        SnailCounter.x = 143
     }
+})
+forever(function () {
+    GlidingAnim = 1
+    pause(100)
+    GlidingAnim = 2
+    pause(100)
 })
 forever(function () {
     if (controller.left.isPressed() || controller.right.isPressed()) {
@@ -1845,10 +2345,24 @@ forever(function () {
     }
 })
 forever(function () {
-    GlidingAnim = 1
-    pause(100)
-    GlidingAnim = 2
-    pause(100)
+    ItemCounter.setImage(ItemCountImage[itemCount])
+    if (itemCount == 0) {
+        StoredItemSpace.setImage(img`
+1 1 1 1 . . . . 1 1 1 1 
+1 . . . . . . . . . . 1 
+1 . . . . . . . . . . 1 
+1 . . . . . . . . . . 1 
+. . . . . . . . . . . . 
+. . . . . . . . . . . . 
+. . . . . . . . . . . . 
+. . . . . . . . . . . . 
+1 . . . . . . . . . . 1 
+1 . . . . . . . . . . 1 
+1 . . . . . . . . . . 1 
+1 1 1 1 . . . . 1 1 1 1 
+`)
+        PowerUp = "Empty"
+    }
 })
 forever(function () {
     for (let value of sprites.allOfKind(SpriteKind.Snail)) {
@@ -1979,6 +2493,16 @@ forever(function () {
             tiles.placeOnRandomTile(value, myTiles.tile31)
             value.y += -5
             value.x += 12
+            value.setFlag(SpriteFlag.Invisible, false)
+        }
+        if (value.tileKindAt(TileDirection.Right, myTiles.tile46)) {
+            value.vy = -50
+            pause(300)
+            value.setFlag(SpriteFlag.Invisible, true)
+            pause(500)
+            tiles.placeOnRandomTile(value, myTiles.tile44)
+            value.y += -16
+            value.vy = -50
             value.setFlag(SpriteFlag.Invisible, false)
         }
     }
